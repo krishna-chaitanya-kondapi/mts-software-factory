@@ -13,6 +13,7 @@ This file is a thin, model-agnostic orientation for human and AI contributors.
 - Distinguish proposed, implemented, verified, released and accepted.
 - Use atomic IDs and traceability across intent → requirement → decision → slice → test/eval → release → observation → learning → requirement delta.
 - Keep governing facts in one authoritative place; use links and minimal tool-specific adapters.
+- When importing or consolidating historical artifacts, follow [source-material/README.md](source-material/README.md); preserve originals and provenance, and do not treat them as authoritative.
 - Do not migrate executable code or establish the permanent architecture without explicit approval.
 - M0–M8 are logical stations, not a requirement for nine separate teams or agents.
 
