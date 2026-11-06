@@ -596,6 +596,7 @@ Principle: **reason with knowledge, vary with configuration, enter through comma
 │   ├── design/                    # slice design packets
 │   ├── operations/                # SLOs, runbooks, recovery
 │   └── learning/                  # decisions, incidents, constraints, retrospectives
+├── source-material/               # preserved historical inputs; see source-material/README.md
 ├── evidence/                      # immutable test/eval/run evidence references
 ├── state/                         # resumable work items and convergence checkpoints
 ├── specs/                         # living feature/slice specifications
@@ -622,6 +623,10 @@ Principle: **reason with knowledge, vary with configuration, enter through comma
     ├── pull_request_template.md
     └── agent instructions         # tool-specific thin adapters, if needed
 ```
+
+### Historical source material and consolidation
+
+Preserve previous-stage artifacts as non-authoritative inputs in `source-material/<domain>/<subject>/<artifact-type>/` (for example, `source-material/mts/ela/product/` and `source-material/mts/math/product/`). Use dated filenames (`product-YYYY-MM-DD.md`) for individual historical versions, and dated snapshot folders only when multiple artifacts form one coherent baseline. Keep original content and provenance; use `undated-01` when the original date is unknown rather than inventing one. Consolidate shared meaning into existing authoritative specifications while retaining subject-specific requirements and recording source-to-target disposition. The lightweight operating convention and inventory live in [`source-material/README.md`](../../source-material/README.md).
 
 ### Context architecture
 
