@@ -8,7 +8,7 @@ M0–M8 stations connect intent, requirements, architecture, design, implementat
 
 ## Sources and authority
 
-- **Governing methodology:** `strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md` — pending exact-source import from the original `AI-SDLC-SOFTWARE-FACTORY-STRATEGY.md` attachment. Do not substitute summaries.
+- **Governing methodology:** [`strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md`](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) — proposed for human ratification. Do not substitute summaries.
 - **Starting instructions:** [strategy/onboarding/project-starting-instructions.md](strategy/onboarding/project-starting-instructions.md), copied from [mts-crossmodel](https://github.com/kpkchaitanya/mts-crossmodel/blob/master/strategy/project-starting-instructions.md).
 - **Historical handoff:** [strategy/source-history/mts-educational-factory-conversation.md](strategy/source-history/mts-educational-factory-conversation.md), copied from [mts-crossmodel](https://github.com/kpkchaitanya/mts-crossmodel/blob/master/strategy/source-history/mts-educational-factory-conversation.md). Fallback context; not an approved architecture.
 - **Implementation source:** [mts-crossmodel](https://github.com/kpkchaitanya/mts-crossmodel), preserved intact for review and selective migration.

@@ -8,6 +8,51 @@
 
 ---
 
+## Table of Contents
+
+- [Strategy at a glance](#strategy-at-a-glance)
+- [1. The Software Factory Model](#1-the-software-factory-model)
+- [2. Non-Negotiable Factory Constitution](#2-non-negotiable-factory-constitution)
+- [3. M0–M8 Adoptable Production Lifecycle](#3-m0m8-adoptable-production-lifecycle)
+  - [The minimum trace chain](#the-minimum-trace-chain)
+  - [3A. Intent-to-Outcome Observability](#3a-intent-to-outcome-observability)
+  - [3B. Human-Reviewable Artifact System by Agent Station](#3b-human-reviewable-artifact-system-by-agent-station)
+  - [3C. Verification-Driven Development and Hierarchical Evidence](#3c-verification-driven-development-and-hierarchical-evidence)
+  - [3D. Closed-Loop Convergence and Recovery](#3d-closed-loop-convergence-and-recovery)
+- [4. M4: The 3D Architecture Kernel](#4-m4-the-3d-architecture-kernel)
+- [5. Iterative Constraint Resolution](#5-iterative-constraint-resolution)
+- [6. The Repeatable Unit: A Modular Vertical Slice](#6-the-repeatable-unit-a-modular-vertical-slice)
+- [7. Factory Asset Architecture](#7-factory-asset-architecture)
+- [8. Reference Repository Blueprint](#8-reference-repository-blueprint)
+- [9. Quality and Verification System](#9-quality-and-verification-system)
+- [10. Product Core, Configuration and Customization](#10-product-core-configuration-and-customization)
+- [11. Controlled Automation Ladder](#11-controlled-automation-ladder)
+- [12. Factory Roles and Responsibility](#12-factory-roles-and-responsibility)
+- [13. Adoption Strategy: POC to Software Factory](#13-adoption-strategy-poc-to-software-factory)
+- [14. First 90-Day Implementation Plan](#14-first-90-day-implementation-plan)
+- [15. Measures That Prevent “More Code” from Masquerading as Progress](#15-measures-that-prevent-more-code-from-masquerading-as-progress)
+- [16. Pioneer and Implementation Practices Incorporated](#16-pioneer-and-implementation-practices-incorporated)
+- [17. Definition of a Working Software Factory](#17-definition-of-a-working-software-factory)
+- [Appendix A — Acronym References](#appendix-a--acronym-references)
+
+---
+
+## Strategy at a glance
+
+The factory organizes governed work into specialized M0–M8 stations, with humans retaining authority and evidence guiding completion and learning.
+
+![AI SDLC Agent-Station Software Factory overview](../images/software-factory-overview.png)
+
+*Overview of the stations, trace spine, completion contract and factory foundation.*
+
+The convergence flow below shows how gaps are routed to the affected station for repair, specification learning or human decision.
+
+![Software factory convergence controller flow](../images/convergence-controller-flow.png)
+
+*Detailed station flow, including gap detection, verification, acceptance and bounded convergence.*
+
+---
+
 ## 1. The Software Factory Model
 
 A software factory is not a large code generator. It is a reusable production system that repeatedly transforms governed human intent into observable, supportable software.
@@ -820,3 +865,17 @@ The model is working when:
 - humans spend more time on intent, trade-offs and learning, and less on repetitive translation.
 
 That is the transition from **AI-assisted project delivery** to an **adoptable AI Software Factory**.
+
+---
+
+## Appendix A — Acronym References
+
+These visual references give illustrative station acronyms and domain examples. The strategy's station definitions and artifact contracts remain authoritative.
+
+### MTS ELA examples
+
+![Hierarchical software factory acronym guide with MTS ELA examples](../images/acronym-reference-mts-ela.png)
+
+### OMS examples
+
+![Software factory acronym journey with OMS examples](../images/acronym-reference-oms.png)
