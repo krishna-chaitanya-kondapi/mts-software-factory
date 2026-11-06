@@ -32,7 +32,9 @@ Track imported items in the table below. Add rows as sources arrive; do not crea
 
 | File | Original source / reference | Original date | Consolidation destination | Status |
 |---|---|---|---|---|
-| _Add when imported_ | | | | |
+| [mts/ela/product/product-2026-11-05.md](mts/ela/product/product-2026-11-05.md) | ELA worksheet-generation chat; `PRODUCT.md` v1.1 | 2026-11-05 | ELA product specification (destination pending) | pending; source baseline approved |
+| [mts/ela/business-architecture/business-architecture-2026-11-05.md](mts/ela/business-architecture/business-architecture-2026-11-05.md) | ELA worksheet-generation chat; `business-architecture(1).md` v0.1 | 2026-11-05 | ELA business architecture (destination pending) | pending; source proposed |
+| [mts/ela/ontology/ontology-2026-11-06.md](mts/ela/ontology/ontology-2026-11-06.md) | Repository review branch `review/ela-ontology-v1`; `ontology.md` v0.1 | 2026-11-06 | ELA ontology (destination pending) | pending; source draft for human review |
 
 Status may be `pending`, `reviewed`, `consolidated` or `deferred`.
 
