@@ -1,6 +1,8 @@
 # AI-SDLC Software Factory Strategy
 
-**Purpose:** Convert a promising POC into a repeatable, governable capability for producing and evolving production software.
+**Purpose:** Turn governed human intent into independently verified, human-accepted, observable software outcomes through reusable agent stations and bounded, persistent learning loops.
+
+**Version:** 2026-11-06 architecture revision · **Status:** Proposed for human ratification; existing approvals and release authority are preserved.
 
 **Operating principle:** **Humans own intent, judgment and authority. AI accelerates elaboration and execution. Deterministic systems provide evidence.**
 
@@ -11,31 +13,32 @@
 A software factory is not a large code generator. It is a reusable production system that repeatedly transforms governed human intent into observable, supportable software.
 
 ```text
-Human intent
+Human intent and desired outcomes
     ↓
-Living product and domain truth
+Product intent and governed domain ontology
     ↓
-Structured requirements and measurable quality
+Business architecture: value streams, capabilities and business flows
     ↓
-Product/process model
+Requirements, acceptance criteria and hierarchical verification criteria
     ↓
-3D architecture + cross-cutting constraints
+Feature completion contract and 3D solution architecture
     ↓
-Modular vertical slices
+Executable process design and modular vertical slices
     ↓
-Evidence from tests, evaluations and runtime
+Independent tests, evals, versioned evidence and human acceptance
     ↓
-Governed learning returned to product truth
+Runtime outcomes, gap detection, root cause and governed deltas
+    ↺ bounded convergence to the affected station
 ```
 
 The factory has four inseparable parts:
 
 | Part | Purpose | Durable assets |
 |---|---|---|
-| **Product system** | Preserve what and why | `PRODUCT.md`, domain ontology, requirements, scenarios, acceptance criteria |
+| **Product system** | Preserve what, why and shared meaning | `product.md`, `ontology.md`, `business-architecture.md`, requirements, acceptance and verification criteria |
 | **Production system** | Define how work moves | lifecycle, phase contracts, workflows, commands, reusable templates |
 | **Engineering system** | Build repeatable product slices | architecture, modules, APIs, code, configuration, tests, CI/CD |
-| **Learning system** | Improve from evidence | telemetry, evaluations, incidents, decisions, constraint backlog, updated specs |
+| **Learning system** | Diagnose and converge from evidence | telemetry, evaluations, observations, gap/RCA ledger, completion contracts, decisions, bounded repairs, updated specs |
 
 The product is the output. The factory is the reusable system that keeps producing and improving products.
 
@@ -65,20 +68,51 @@ Each level is a **logical capability and quality gate**, not necessarily a separ
 | Level | Factory capability | Required inputs | Repeatable activities | Authoritative outputs | Exit evidence / gate |
 |---|---|---|---|---|---|
 | **M0 — POC / Vibe Coding** | Explore cheaply | problem hypothesis, time box | prototype, compare approaches, test feasibility | disposable prototype, findings, risks, go/stop decision | learning captured; production code is not assumed |
-| **M1 — Intent & Domain Ontology** | Preserve meaning | sponsor intent, users, domain sources | define outcomes, boundaries, vocabulary, functional areas, entities and relationships | `PRODUCT.md`, intent map, ontology/glossary, scope and anti-scope | human owner confirms what, why, who and boundaries |
-| **M2 — Requirements & Quality** | Make intent verifiable | M1 truth | scenarios, constraints, acceptance criteria, NFRs, examples and edge cases | requirements, quality-attribute scenarios, acceptance/evaluation plan | ambiguity assessed; success is measurable |
-| **M3 — Structured Product & Process** | Make work operable | M1–M2 | map functional areas to phases; define manual/AI-assisted/semi/fully automated mode; separate product core from customization | phase map, process model, business rules/config model, product-extension model | process and variation points are explicit |
+| **M1 — Intent & Domain Ontology** | Preserve purpose and shared meaning | sponsor intent, users, domain sources | define outcomes, scope, domain terms/entities/relationships/invariants; steward semantic changes | `product.md`, `ontology.md`, intent/outcome map | human owner confirms intent; domain steward confirms semantics |
+| **M2 — Business Architecture** | Model value delivery before detailed requirements | M1 truth and stakeholder process evidence | model value streams, functional areas, capabilities, business flows, rules, decisions and handoffs | `business-architecture.md`; VS/CAP/BP maps | value delivery and process boundaries are understandable, technology independent |
+| **M3 — Requirements & Verification Design** | Make business behavior independently assessable | M1–M2, constraints and NFRs | derive REQs/ACs, group VCs, specify verification methods and FCC; resolve ambiguity and edge cases | `requirements.md`, `verification-criteria.md`, feature completion contract | REQ/AC/VC coverage and measurable success are reviewed |
 | **M4 — 3D Architecture & Trade-offs** | Make coherent choices | M1–M3 plus enterprise constraints | analyze functionality, anatomy and flow together; resolve boundaries, alternatives, ownership and trade-offs | C1/C2 views, high-level ERD, interface map, NFR tactics, responsibility map, ADRs | architecture satisfies scenarios; decisions and owners recorded |
-| **M5 — Detailed Design** | Make slices implementable | approved M4 boundaries | define C3/C4 components, APIs, contracts, state, workflows, algorithms, migrations and test seams | slice design packet, contracts, detailed ERD, pseudocode, test design | slice is bounded, contract-complete and independently testable |
+| **M5 — Detailed Design & Executable Process** | Make slices implementable | approved M4 boundaries, M2 business flow and M3 specs | define C3/C4 components, APIs, executable workflow/process, state, algorithms, migrations and test seams | `design.md`, `process.md`, slice packet, contracts | slice and its executable orchestration are bounded and testable |
 | **M6 — Iterative Modular Vertical-Slice Build & Integration** | Produce working increments | approved slice packet | code plus configuration; contract-first integration; migrations; documentation; incremental PRs | executable slice, tests, build artifacts, provenance | build, policy, contract and integration gates pass |
-| **M7 — Continuous Verification** | Produce trustworthy evidence | executable slice | unit/integration/contract/E2E/security/performance tests; AI evals; exploratory/manual verification; regression | evidence bundle, trace report, exceptions, release recommendation | acceptance and quality thresholds pass; residual risk accepted |
-| **M8 — Observe, Learn & Adapt** | Close the learning loop | deployed behavior and user feedback | collect telemetry, compare outcomes, analyze failures and drift, prioritize next constraint | runtime evidence, learning log, updated backlog/specs/ontology, next constraint | learning is incorporated into authoritative sources |
+| **M7 — Verification & Evidence** | Produce independent, inspectable evidence | executable slice, VC catalog, FCC | deterministic tests, rubric evals, inspection, review, regressions, coverage reconciliation, independent challenge | tests/evals, immutable EVD, `verification-report`, gap ledger | evidence meets FCC verification gates; exceptions authorized |
+| **M8 — Observe, Learn & Feedback** | Detect value and operations gaps | released behavior, teacher/user feedback, operational signals | compare outcomes, detect semantic and runtime gaps, perform RCA, propose DELTAs, route to owning station | `learning.md`, OBS/SIG/RCA/DELTA, change proposals | lessons update authoritative artifacts with approvals |
+
+**Sequence interpretation:** M2 describes the *business's* process before detailed requirements; M5 describes the *software/agent execution* process after requirements and architecture. Early requirements and discovery inform M2; the model is iterative, never a one-pass waterfall. Existing M0 and M8 remain stable; the revised M2/M3 ownership is a deliberate migration from the previous station numbering.
+
+#### One-page agent-station architecture
+
+```mermaid
+flowchart TB
+  M0["M0 Explore / POC<br/>exploration.md"] --> M1["M1 Intent & Ontology<br/>product.md · ontology.md"]
+  M1 <--> M2["M2 Business Architecture<br/>business-architecture.md"]
+  M2 --> M3["M3 Requirements & Verification Design<br/>requirements.md · verification-criteria.md · FCC"]
+  M1 --> M3
+  M3 --> M4["M4 Solution Architecture<br/>architecture.md · ADR"]
+  M4 --> M5["M5 Detailed Design / Executable Process<br/>design.md · process.md"]
+  M5 --> M6["M6 Modular Build<br/>implementation.md"]
+  M6 --> M7["M7 Verification & Evidence<br/>tests · evals · verification-report"]
+  M7 --> Gate{"Completion Contract"}
+  Gate -->|Satisfied| Human["Human Acceptance / Release"] --> M8["M8 Observe, Learn & Feedback<br/>learning.md"]
+  Gate -->|Gap| RCA["Gap Detection / RCA / Impact"]
+  M8 --> RCA
+  RCA --> Controller{"Convergence Controller"}
+  Controller -->|L1 repair| M5
+  Controller -->|L2 specification| M3
+  Controller -->|L2 semantic| M1
+  Controller -->|L3 intent requires approval| Human
+  Controller -->|Limit / no authority| Esc["Escalate with evidence"]
+```
+
+The station diagram is a logical workflow, not a proof of implemented automation. `ontology.md` is a **governing semantic contract**: changes to `TERM/ENT/REL/INV` relationships trigger dependency and evidence impact analysis. The Convergence Controller is cross-cutting; L1/L2/L3 describe different routes rather than separate permanent teams.
 
 ### The minimum trace chain
 
 ```text
-Intent → Requirement → Architecture decision → Slice → Code/config
-      → Test/evaluation → Build → Deployment → Runtime evidence → Learning
+Intent/Outcome → Ontology → Value Stream/Capability/Business Process
+  → Requirement/Acceptance Criterion → Verification Group/Criterion/FCC
+  → Architecture Decision → Slice/Executable Flow → Code/Config/Build
+  → Test/Eval/Review → Versioned Evidence → Human Acceptance/Release
+  → Runtime Outcome → Observation/RCA/Delta → Affected upstream station
 ```
 
 No factory artifact is complete if its upstream intent or downstream evidence cannot be found.
@@ -107,14 +141,16 @@ Every governed change participates in this graph:
 
 ```text
 Intent / Outcome
-  → Requirement + Acceptance Criteria + Quality Scenarios
-    → Process Phase + 3D Architecture Decision
-      → Modular Slice + Detailed Design + Contract
+  → Domain Ontology (TERM / ENT / REL / INV)
+    → Value Stream / Capability / Business Process
+      → Requirement + AC + Quality Scenario + VC + FCC
+        → 3D Architecture Decision + Modular Slice + Executable Flow
+          → Detailed Design + Contract
         → Code / Configuration / Data Migration
-          → Test / Evaluation / Review Evidence
-            → Build / Release / Deployment
+          → Build + Test / Evaluation / Review + Versioned Evidence
+            → Human Acceptance / Release / Deployment
               → Runtime Signal / User Outcome / Feedback
-                → Learning → Requirement Delta → Updated Intent or Requirement
+                → RCA / Learning / Delta → Affected authoritative station
 ```
 
 Each node has a stable ID and version. Each relationship is explicit—for example `implements`, `constrains`, `verified_by`, `released_as`, `observed_by`, `supersedes` or `produced_delta`.
@@ -129,6 +165,8 @@ Maintain a machine-readable ledger generated from authoritative artifacts and re
 | Intent/outcome link | Why the requirement exists |
 | Owner and approver | Human authority and decision responsibility |
 | Acceptance criteria | Observable functional completion conditions |
+| Ontology and business links | Canonical entities, relationships, value streams, capabilities and processes |
+| Verification criteria and FCC | Grouped independent checks, applicability, threshold and completion rule |
 | Quality scenarios | Non-functional completion conditions |
 | Architecture/design links | Where the requirement is allocated and resolved |
 | Slice and implementation links | Code, configuration, data and migration realization |
@@ -257,14 +295,14 @@ Each station has one primary Markdown artifact that explains the coherent whole.
 | Station | Primary artifact | Atomic trace entities | Canonical ID namespaces | Suggested atomic storage | Human gate focuses on |
 |---|---|---|---|---|---|
 | **M0 — Explore / POC** | `exploration.md` | hypothesis, experiment, finding | `HYP-001`, `EXP-001`, `FND-001` | `docs/exploration/experiments/EXP-001.md` | what was tested and learned; go, pivot or stop; whether any POC asset may enter production |
-| **M1 — Intent & Domain** | `PRODUCT.md` and `ontology.md` | intent, outcome, domain term, domain entity | `INT-001`, `OUT-001`, `TERM-001`, `ENT-001` | `docs/product/intents/INT-001.md`; `docs/domain/entities/ENT-001.md` | purpose, users, outcomes, vocabulary, boundaries and shared meaning |
-| **M2 — Requirements & Quality** | `requirements.md` | requirement, acceptance criterion, quality scenario, constraint | `REQ-001`, `AC-001.1`, `QAS-001`, `CST-001` | `docs/requirements/REQ-001.md`; criteria may remain addressable sections within it | completeness, clarity, measurability, quality and scope |
-| **M3 — Product & Process** | `process.md` | functional area, phase, business rule, variation point | `FA-001`, `PHASE-001`, `RULE-001`, `VAR-001` | `docs/process/phases/PHASE-001.md`; `docs/process/rules/RULE-001.md` | flow, automation mode, handoffs, product core and legitimate variation |
+| **M1 — Intent & Ontology** | `product.md`, `ontology.md` | intent, outcome, domain term, entity, relation, invariant | `INT-001`, `OUT-001`, `TERM-001`, `ENT-001`, `REL-001`, `INV-001` | `docs/product/intents/INT-001.md`; `docs/domain/entities/ENT-001.md` | outcome and canonical meaning are clear and owned |
+| **M2 — Business Architecture** | `business-architecture.md` | value stream, capability, business process, functional area, business rule, variation | `VS-001`, `CAP-001`, `BP-001`, `FA-001`, `RULE-001`, `VAR-001` | `docs/business-architecture/processes/BP-001.md` | business flow and capabilities are sufficiently modeled before detailed REQs |
+| **M3 — Requirements & Verification Design** | `requirements.md`, `verification-criteria.md` | requirement, acceptance criterion, quality scenario, constraint, verification group/criterion, completion contract | `REQ-001`, `AC-001.1`, `QAS-001`, `CST-001`, `VG-001`, `VC-001`, `FCC-001` | `docs/requirements/REQ-001.md`; `docs/verification/criteria/VC-001.md` | requirements and verification criteria are linked, independently assessable and scoped |
 | **M4 — 3D Architecture** | `architecture.md` | architecture decision, component, interface, responsibility; reuses domain entities and quality scenarios | `ADR-001`, `CMP-001`, `IFC-001`, `RESP-001`; reuse `ENT-*`, `QAS-*` | `docs/architecture/adr/ADR-001.md`; architecture catalog entries under `components/`, `interfaces/`, `responsibilities/` | 3D coherence, alternatives, boundaries, quality tactics, ownership and trade-offs |
-| **M5 — Detailed Design** | `design.md` | vertical slice, design component, API/event contract, state, algorithm | `SLICE-001`, `DC-001`, `API-001`, `EVT-001`, `STATE-001`, `ALG-001` | `docs/design/slices/SLICE-001.md`; executable contracts under `contracts/` | whether the slice is bounded, implementable, contract-complete and independently testable |
+| **M5 — Detailed Design** | `design.md`, `process.md` | vertical slice, executable flow, design component, API/event contract, state, algorithm | `SLICE-001`, `FLOW-001`, `DC-001`, `API-001`, `EVT-001`, `STATE-001`, `ALG-001` | `docs/design/slices/SLICE-001.md`; executable contracts under `contracts/` | whether executable flow implements M2 business behavior and M3 acceptance conditions |
 | **M6 — Modular Build** | `implementation.md` | implementation unit, configuration item, migration, build | `IMP-001`, `CFG-001`, `MIG-001`, `BUILD-001` | `docs/implementation/IMP-001.md`; configuration and migrations beside executable assets | whether the approved design is realized in the identified build with provenance |
-| **M7 — Verification & Evidence** | `verification.md` | test, evaluation, evidence result, approved exception | `TEST-001`, `EVAL-001`, `EVD-001`, `EXC-001` | `tests/`; `evals/`; `evidence/EVD-001.json`; `docs/exceptions/EXC-001.md` | whether every in-scope criterion and quality scenario has sufficient evidence |
-| **M8 — Observe, Learn & Feedback** | `learning.md` | observation, runtime signal, feedback item, learning, requirement delta | `OBS-001`, `SIG-001`, `FDB-001`, `LRN-001`, `DELTA-001` | `docs/learning/LRN-001.md`; `deltas/DELTA-001.md`; telemetry in the observability platform | whether runtime evidence changes intent, requirements, architecture, design or implementation |
+| **M7 — Verification & Evidence** | `verification.md` and generated verification report | test, eval, execution run, evidence, gap, exception | `TEST-001`, `EVAL-001`, `RUN-001`, `EVD-001`, `GAP-001`, `EXC-001` | `tests/`; `evals/`; `evidence/EVD-001.json`; `docs/exceptions/EXC-001.md` | mandatory FCC evidence and independent coverage have been established |
+| **M8 — Observe, Learn & Feedback** | `learning.md` | observation, signal, feedback, RCA, learning, delta | `OBS-001`, `SIG-001`, `FDB-001`, `RCA-001`, `LRN-001`, `DELTA-001` | `docs/learning/LRN-001.md`; `deltas/DELTA-001.md`; telemetry | outcome gaps are diagnosed and routed without silent semantic drift |
 
 `TERM-*` is reserved for domain vocabulary and `CST-*` for requirements constraints. This prevents the earlier ambiguity of using `CON-*` for two different concepts.
 
@@ -288,14 +326,16 @@ Use a separate file when an entity has its own lifecycle, owner, approval, alter
 ```text
 INT-001
   → OUT-002
-    → REQ-012 / AC-012.1 / QAS-003
-      → PHASE-003 / RULE-008
-        → ADR-001 / CMP-001 / IFC-002 / ENT-001
-          → SLICE-004 / API-002
+    → ENT-001 / REL-001 / INV-001
+      → VS-001 / CAP-001 / BP-003 / RULE-008
+        → REQ-012 / AC-012.1 / QAS-003
+          → VG-001 / VC-004 / FCC-001
+            → ADR-001 / CMP-001 / IFC-002
+              → SLICE-004 / FLOW-001 / API-002
             → IMP-021 / CFG-004 / BUILD-019
-              → TEST-041 / EVAL-006 / EVD-052
-                → OBS-014 / SIG-009
-                  → LRN-003 / DELTA-006
+              → TEST-041 / EVAL-006 / RUN-001 / EVD-052
+                → Human approval / Release / OBS-014 / SIG-009
+                  → RCA-002 / LRN-003 / DELTA-006
 ```
 
 This chain is navigable in both directions. A requirement shows its realization and evidence; a code, configuration, test or runtime signal shows the intent and decision that justify its existence.
@@ -334,6 +374,63 @@ Every station summary provides direct links to its primary artifact, atomic enti
 - Keep the one-page briefs concise; move detail into linked drill-downs rather than shrinking fonts or duplicating content.
 
 ---
+
+### 3C. Verification-Driven Development and Hierarchical Evidence
+
+**Working umbrella label:** Verification-Driven Development (VDD). This is a proposed factory operating model, not a claim of a separately standardized methodology. **TDD** applies to deterministic behavior; **BDD** describes stakeholder-understandable scenarios; **eval-driven design** applies to judgment-bearing AI behavior. All are guided by pre-specified, independently inspectable evidence.
+
+| Term | Meaning | Factory usage |
+|---|---|---|
+| Testing | Executing or examining a target to detect defects and assess quality | Deterministic, integration, security, exploratory checks |
+| Verification | Objective evidence that specified requirements are met | AC/VC pass and evidence coverage |
+| Validation | Objective evidence that intended use and stakeholder needs are met | Human and operational outcome acceptance |
+| Evaluation (eval) | Measurement against a rubric, benchmark or other criteria | Quality of LLM questions, reasoning, distractors, agent decisions |
+| Acceptance criterion (AC) | Product condition for acceptance of a requirement | Exactly 20 questions in final PDF |
+| Verification criterion (VC) | Independently assessable condition and evidence rule | Rendered count matches approved requirement |
+
+Verification is not synonymous with testing; reviews, static analysis and inspections can provide evidence. An eval may support verification or validation, but an AI judge's score is not proof of a deterministic invariant. For high-risk semantic evaluations, calibrate against expert examples and record disagreement, uncertainty and adjudication.
+
+**`verification-criteria.md` contract:** Each group (`VG-*`) has purpose, parent, risk and applicability. Each criterion (`VC-*`) contains stable ID, statement, linked `REQ/AC/QAS`, test condition, method, oracle or rubric, threshold, severity, independent evaluator requirement, evidence specification, ownership, version and applicability. Links are many-to-many: one AC may require multiple VCs and one reusable VC may cover several ACs. Groups organize reporting; they do not replace explicit AC↔VC links.
+
+**Feature Completion Contract (`FCC-*`):** Immutable-for-a-run snapshot of applicable requirements, mandatory VCs, pass/threshold rules, regression scope, evidence expectations, authorized exceptions, budgets, human gates and post-release observation. Separate `IMPLEMENTED`, `VERIFIED`, `AWAITING_ACCEPTANCE`, `ACCEPTED`, `RELEASED`, `OBSERVED`, `BLOCKED`, `ESCALATED`; code merged is not feature complete. Acceptance can precede release, while long-term outcome validation legitimately continues after release.
+
+**Verification report:** Generate a drill-downable human-readable report from trace relationships and append-only execution evidence. It contains (1) version/scope/run summary, (2) applicable vs explicitly out-of-scope vs deferred counts, (3) CAP→REQ→AC→VC→TEST/EVAL/REVIEW→RUN→EVD drill-down and alternate VG view, (4) failure/RCA and attempt history, (5) independent verification metadata, and (6) FCC and human decision. Use `NOT_APPLICABLE`, `NOT_DESIGNED`, `NOT_EXECUTED`, `BLOCKED`, `PASSED`, `FAILED`, `INCONCLUSIVE`, `WAIVED` (authorized). Report coverage, execution, pass percentage and acceptance separately; never treat unverified or excluded items as passes.
+
+### 3D. Closed-Loop Convergence and Recovery
+
+The factory contains **three distinct loops**, not an unbounded retry arrow:
+
+| Loop | Trigger | Return destination | Decision authority |
+|---|---|---|---|
+| **L1 Execution repair** | Broken build, failed test, runtime defect, layout regression | M5/M6 design, code or configuration; rerun M7 | Bounded authorized repairs |
+| **L2 Specification learning** | Missing/contradictory REQ, AC, VC, semantic rule or architecture condition | M1 ontology, M2 business process, M3 requirements/VC or M4 ADR | Approvals proportionate to scope and risk |
+| **L3 Intent/outcome learning** | Actual user value, usability or learning outcomes diverge from desired outcomes | M1 intent and M2 business value stream, then downstream changes | Human product/domain owner |
+
+**Convergence Controller:** A cross-cutting orchestrator, not another serial agent station. At every cycle it reads the FCC, trace graph, evidence and persisted state; identifies gaps; classifies symptom versus cause; records competing RCA hypotheses and evidence; computes blast radius; routes the smallest authorized repair to its owning station; executes independent verification and regressions; measures progress; checkpoints; repeats or escalates. A semantic change to `ontology.md` must traverse its `TERM/ENT/REL/INV` consumers, invalidating affected downstream evidence until rerun.
+
+```mermaid
+flowchart TD
+  A["Intent & ontology"] --> B["Business architecture"] --> C["REQ / AC / VC / FCC"]
+  C --> D["Architecture / Design / Build"] --> E["Tests, evals and evidence"]
+  E --> F{"FCC verification gates met?"}
+  F -->|Yes| G["Human acceptance / release"] --> H["Observe outcomes"]
+  F -->|No| I["Gap detection and RCA"]
+  H -->|Outcome gap| I
+  I --> J{"Authorized repair?"}
+  J -->|L1 implementation| D
+  J -->|L2 specification| C
+  J -->|L2 domain| A
+  J -->|L3 intent| K["Human intent decision"] --> A
+  J -->|No / budget or progress limit| L["Escalate with evidence and restart point"]
+```
+
+**Safety and convergence policy:** Per-feature/per-defect attempt ceilings, cost and wall-time budgets, retry backoff, no-progress and oscillation detection, reversible isolation, source access limits, policy/security gates, no criterion weakening to create a green result, approval for material changes, and human-controlled deployment. Every repair states the hypothesis, changed artifacts, verification scope and observed result. Independent verification must not rely solely on the producer's self-assessment. A blocked dependency or missing authority causes an explicit pause rather than a fabricated success.
+
+**Resumability:** The model-neutral work-item ledger persists `work_id`, intent, FCC snapshot, artifact versions and hashes, current station, pending gaps, `RUN` and trace IDs, evidence, RCA hypotheses, decisions, attempt history, budget, approvals, next action and stop reason. Any supported model/harness can resume at the last safe checkpoint without reopening settled decisions.
+
+**Observation planes:** Intent/outcome, business-process, requirements/ontology, verification, agent execution and operational telemetry. Use structured logs, traces, metrics and events with shared `work_id`, `req_id`, `vc_id`, `run_id`, `attempt_id`, `artifact_hash`. Apply privacy and retention controls; no sensitive hidden chain-of-thought logging is required.
+
+**Factory measures:** Verified feature completion rate; first-pass verification; verified REQ/AC/VC coverage; mean repair iterations; diagnosis accuracy; defect recurrence; escaped defects; human intervention rate; cost per independently verified and human-accepted feature. Distinguish actual observability from a dashboard that merely reports code merged.
 
 ## 4. M4: The 3D Architecture Kernel
 
@@ -429,13 +526,20 @@ Principle: **reason with knowledge, vary with configuration, enter through comma
 
 ```text
 /
-├── PRODUCT.md                     # audience, problem, purpose, boundaries, outcomes
+├── product.md                     # audience, problem, purpose, boundaries, outcomes
+├── ontology.md                    # shared entities, terms, relationships and invariants
+├── business-architecture.md       # domain value streams, capabilities, business flows
+├── requirements.md                # product requirements and acceptance conditions
+├── verification-criteria.md       # hierarchical, reusable VC catalog
 ├── AGENTS.md                      # concise agent operating contract and pointers
 ├── README.md                      # human entry point and local quick start
 ├── docs/
-│   ├── intent/                    # intent map, ontology, glossary
-│   ├── requirements/              # scenarios, constraints, acceptance criteria
-│   ├── process/                   # phases and automation modes
+│   ├── intent/                    # intent and outcome records
+│   ├── domain/                    # canonical ontology entities and relationships
+│   ├── business-architecture/     # value streams, capabilities and business flows
+│   ├── requirements/              # scenarios, constraints, AC and FCC records
+│   ├── verification/              # VC catalogs, coverage reports, evidence views
+│   ├── process/                   # executable workflows and automation modes
 │   ├── architecture/
 │   │   ├── c1-context.md
 │   │   ├── c2-containers.md
@@ -447,6 +551,8 @@ Principle: **reason with knowledge, vary with configuration, enter through comma
 │   ├── design/                    # slice design packets
 │   ├── operations/                # SLOs, runbooks, recovery
 │   └── learning/                  # decisions, incidents, constraints, retrospectives
+├── evidence/                      # immutable test/eval/run evidence references
+├── state/                         # resumable work items and convergence checkpoints
 ├── specs/                         # living feature/slice specifications
 ├── contracts/                     # OpenAPI, AsyncAPI, schemas, conformance cases
 ├── config/                        # externalized product/project configuration
@@ -479,6 +585,8 @@ Keep root instructions short. Use them as a map to authoritative, scoped files. 
 ---
 
 ## 9. Quality and Verification System
+
+This section describes implementation techniques that realize the governing `REQ/AC ↔ VG/VC ↔ TEST/EVAL/RUN/EVD ↔ FCC` contracts in §3C. Verification outcomes must be derived from versioned evidence; the report is a view, not a parallel manual truth source. Human validation and risk acceptance are distinct decisions. See §3D for the three feedback loops and autonomous repair limits.
 
 Verification has three complementary layers:
 
@@ -581,12 +689,13 @@ Do not attempt to automate the full lifecycle first. Establish a dependable path
 
 ### Stage 1 — Establish product truth
 
-- Create `PRODUCT.md`, ontology/glossary and scope boundaries.
+- Create `product.md`, `ontology.md` and scope boundaries.
+- Model business value streams, capabilities and processes before elaborating detailed requirements.
 - Convert prompt history and tribal knowledge into authoritative artifacts.
-- Define measurable requirements, examples and quality scenarios.
+- Define measurable requirements, ACs, grouped VCs, FCCs, examples and quality scenarios.
 - Create trace IDs or stable links between intent, requirements and evidence.
 
-**Exit:** humans can reconstruct why the selected slice should exist.
+**Exit:** humans can reconstruct why the selected slice should exist, how it delivers business value, and how its completion will be verified.
 
 ### Stage 2 — Resolve architecture in 3D
 
@@ -602,6 +711,7 @@ Do not attempt to automate the full lifecycle first. Establish a dependable path
 - Create the detailed slice packet.
 - Implement in small, reviewable changes.
 - Add deterministic tests, semantic evals where relevant and manual exploration.
+- Demonstrate one bounded L1 repair cycle with independently recorded before/after evidence.
 - Add CI, secrets handling, dependency controls, observability, rollout and rollback.
 
 **Exit:** a user-visible outcome runs in a production-like environment with an evidence bundle.
@@ -630,11 +740,11 @@ Do not attempt to automate the full lifecycle first. Establish a dependable path
 
 | Period | Focus | Deliverables |
 |---|---|---|
-| **Days 1–15** | POC assessment and constitution | baseline, product owner, `PRODUCT.md`, ontology, risk/constraint backlog, initial metrics |
-| **Days 16–30** | Requirements and 3D architecture | quality scenarios, phase model, C1/C2, entity flow, responsibility map, first ADRs |
-| **Days 31–50** | First modular production slice | slice packet, contracts, code/config separation, baseline test/eval suite |
-| **Days 51–65** | Delivery and evidence | reusable CI, security gates, provenance, deployment/rollback, telemetry and runbook |
-| **Days 66–75** | Runtime learning | controlled release, user feedback, SLO evidence, constraint review, updated specs |
+| **Days 1–15** | POC assessment, intent and ontology | baseline, product owner, `product.md`, `ontology.md`, risk/constraint backlog, initial metrics |
+| **Days 16–30** | Business architecture, verification design and 3D architecture | `business-architecture.md`, REQ/AC/VC/FCC, C1/C2, entity flow, first ADRs |
+| **Days 31–50** | First modular production slice | slice packet, executable process, code/config separation, baseline tests/evals and trace coverage |
+| **Days 51–65** | Evidence and L1 convergence | CI, security gates, immutable evidence, verification report, seeded-defect repair loop, rollback |
+| **Days 66–75** | Controlled release and L2/L3 learning | human approval, outcome signals, RCA/delta routing, updated specs and ontology |
 | **Days 76–90** | Factory extraction | golden-path template, reusable workflows/skills, second-slice trial, adoption guide |
 
 Start with one team and one representative product. A factory is proven by the second successful use, not by the sophistication of its first framework.
