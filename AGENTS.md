@@ -2,8 +2,8 @@
 
 This file is a thin, model-agnostic orientation for human and AI contributors.
 
-1. Read [project starting instructions](strategy/project-starting-instructions.md) in full.
-2. Read the original governing [AI-SDLC Software Factory Strategy](strategy/ai-sdlc-software-factory-strategy.md) when imported. **Until then, do not infer approval or substitute a summary.**
+1. Read [project starting instructions](strategy/onboarding/project-starting-instructions.md) in full.
+2. Read the original governing [AI-SDLC Software Factory Strategy](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) when imported. **Until then, do not infer approval or substitute a summary.**
 3. Treat [historical handoff](strategy/source-history/mts-educational-factory-conversation.md) as fallback context, subordinate to approved artifacts and verified evidence.
 4. Inspect the [legacy implementation](https://github.com/kpkchaitanya/mts-crossmodel) as evidence, not an automatic template.
 

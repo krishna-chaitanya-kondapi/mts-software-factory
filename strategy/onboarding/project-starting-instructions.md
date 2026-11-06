@@ -47,8 +47,10 @@ mts-software-factory/
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── strategy/
-│   ├── ai-sdlc-software-factory-strategy.md
-│   ├── project-starting-instructions.md
+│   ├── ai-sdlc/
+│   │   └── ai-sdlc-software-factory-strategy.md
+│   ├── onboarding/
+│   │   └── project-starting-instructions.md
 │   ├── migration-strategy.md
 │   └── roadmap.md
 ├── docs/
