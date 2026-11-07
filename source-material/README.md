@@ -9,20 +9,20 @@ source-material/
 └── mts/
     ├── ela/
     │   └── product/
-    │       ├── product-2026-08-15.md
-    │       └── product-2026-11-04.md
+    │       ├── product-2026-08-15-v1.md
+    │       └── product-2026-11-04-v1.md
     ├── math/
     │   └── product/
-    │       └── product-2026-10-15.md
+    │       └── product-2026-10-15-v1.md
     └── shared/
 ```
 
 Dates and entries above are examples, not files that have been imported.
 
 - Group by `<domain>/<subject>/<artifact-type>/`; create folders only when material is available.
-- Default to `<artifact>-YYYY-MM-DD.<ext>`, using the **known original artifact date**, not the import date.
-- If the original date is unknown, use `<artifact>-undated-01.<ext>` and record the uncertainty.
-- If two versions share a date, append `-01`, `-02`, etc. Keep explicit version identifiers when those are part of the original artifact's identity.
+- Default to `<artifact>-YYYY-MM-DD-vN.<ext>` (starting at `v1` each date), using the **known original artifact date**, not the import date.
+- If the original date is unknown, use `<artifact>-undated-v1.<ext>` and record the uncertainty.
+- If two snapshots share a date, increment `v2`, `v3`, etc. in creation order. Record the difference in the inventory (for example, initial dump versus refined holistic draft). This snapshot suffix is distinct from any formal document version recorded inside the source.
 - Use `snapshots/YYYY-MM-DD/` within a subject only when several related files form one coherent historical baseline.
 - Preserve original content (including format) and source provenance. Never silently overwrite or discard historical versions.
 
@@ -30,11 +30,11 @@ Dates and entries above are examples, not files that have been imported.
 
 Track imported items in the table below. Add rows as sources arrive; do not create placeholder artifacts.
 
-| File | Original source / reference | Original date | Consolidation destination | Status |
+| File | Original source / reference | Original date | Consolidation destination | Status / revision note |
 |---|---|---|---|---|
-| [mts/ela/product/product-2026-11-05.md](mts/ela/product/product-2026-11-05.md) | ELA worksheet-generation chat; `PRODUCT.md` v1.1 | 2026-11-05 | ELA product specification (destination pending) | pending; source baseline approved |
-| [mts/ela/business-architecture/business-architecture-2026-11-05.md](mts/ela/business-architecture/business-architecture-2026-11-05.md) | ELA worksheet-generation chat; `business-architecture(1).md` v0.1 | 2026-11-05 | ELA business architecture (destination pending) | pending; source proposed |
-| [mts/ela/ontology/ontology-2026-11-06.md](mts/ela/ontology/ontology-2026-11-06.md) | Repository review branch `review/ela-ontology-v1`; `ontology.md` v0.1 | 2026-11-06 | ELA ontology (destination pending) | pending; source draft for human review |
+| [mts/ela/product/product-2026-11-05-v1.md](mts/ela/product/product-2026-11-05-v1.md) | ELA worksheet-generation chat; `PRODUCT.md` v1.1 | 2026-11-05 | ELA product specification (destination pending) | pending; source baseline approved, first archived snapshot |
+| [mts/ela/business-architecture/business-architecture-2026-11-05-v1.md](mts/ela/business-architecture/business-architecture-2026-11-05-v1.md) | ELA worksheet-generation chat; `business-architecture(1).md` v0.1 | 2026-11-05 | ELA business architecture (destination pending) | pending; source proposed, first archived snapshot |
+| [mts/ela/ontology/ontology-2026-11-06-v1.md](mts/ela/ontology/ontology-2026-11-06-v1.md) | Repository review branch `review/ela-ontology-v1`; `ontology.md` v0.1 | 2026-11-06 | ELA ontology (destination pending) | pending; source draft for human review, private Library URLs replaced with local source links |
 
 Status may be `pending`, `reviewed`, `consolidated` or `deferred`.
 
