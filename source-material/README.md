@@ -8,16 +8,15 @@ Preserve earlier-stage documents here for reference and progressive consolidatio
 source-material/
 └── mts/
     ├── ela/
-    │   └── product/
-    │       ├── product-2026-08-15-v1.md
-    │       └── product-2026-11-04-v1.md
+    │   ├── product/
+    │   ├── business-architecture/
+    │   └── ontology/
     ├── math/
-    │   └── product/
-    │       └── product-2026-10-15-v1.md
+    │   ├── product/
+    │   ├── business-architecture/
+    │   └── ontology/
     └── shared/
 ```
-
-Dates and entries above are examples, not files that have been imported.
 
 - Group by `<domain>/<subject>/<artifact-type>/`; create folders only when material is available.
 - Default to `<artifact>-YYYY-MM-DD-vN.<ext>` (starting at `v1` each date), using the **known original artifact date**, not the import date.
@@ -35,6 +34,9 @@ Track imported items in the table below. Add rows as sources arrive; do not crea
 | [mts/ela/product/product-2026-11-05-v1.md](mts/ela/product/product-2026-11-05-v1.md) | ELA worksheet-generation chat; `PRODUCT.md` v1.1 | 2026-11-05 | ELA product specification (destination pending) | pending; source baseline approved, first archived snapshot |
 | [mts/ela/business-architecture/business-architecture-2026-11-05-v1.md](mts/ela/business-architecture/business-architecture-2026-11-05-v1.md) | ELA worksheet-generation chat; `business-architecture(1).md` v0.1 | 2026-11-05 | ELA business architecture (destination pending) | pending; source proposed, first archived snapshot |
 | [mts/ela/ontology/ontology-2026-11-06-v1.md](mts/ela/ontology/ontology-2026-11-06-v1.md) | Repository review branch `review/ela-ontology-v1`; `ontology.md` v0.1 | 2026-11-06 | ELA ontology (destination pending) | pending; source draft for human review, private Library URLs replaced with local source links |
+| [mts/math/product/product-2026-11-06-v1.md](mts/math/product/product-2026-11-06-v1.md) | MTS Math architecture generation chat; `product.md` v1.0-rc1 | 2026-11-06 | Math product specification (destination pending) | pending; refined, review-ready candidate; first **imported** Math product snapshot, not approved canonical product |
+| [mts/math/business-architecture/business-architecture-2026-11-06-v1.md](mts/math/business-architecture/business-architecture-2026-11-06-v1.md) | MTS Math architecture generation chat; `business-architecture.md` v1.0-rc1 | 2026-11-06 | Math business architecture (destination pending) | pending; refined, review-ready candidate; first imported snapshot |
+| [mts/math/ontology/ontology-2026-11-06-v1.md](mts/math/ontology/ontology-2026-11-06-v1.md) | MTS Math architecture generation chat; `ontology.md` v1.0-rc1 | 2026-11-06 | Math ontology (destination pending) | pending; refined, review-ready candidate; first imported snapshot |
 
 Status may be `pending`, `reviewed`, `consolidated` or `deferred`.
 
