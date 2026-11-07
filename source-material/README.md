@@ -14,7 +14,9 @@ source-material/
     ├── math/
     │   ├── product/
     │   ├── business-architecture/
-    │   └── ontology/
+    │   ├── ontology/
+    │   ├── requirements/
+    │   └── design/
     └── shared/
 ```
 
@@ -37,6 +39,8 @@ Track imported items in the table below. Add rows as sources arrive; do not crea
 | [mts/math/product/product-2026-11-06-v1.md](mts/math/product/product-2026-11-06-v1.md) | MTS Math architecture generation chat; `product.md` v1.0-rc1 | 2026-11-06 | Math product specification (destination pending) | pending; refined, review-ready candidate; first **imported** Math product snapshot, not approved canonical product |
 | [mts/math/business-architecture/business-architecture-2026-11-06-v1.md](mts/math/business-architecture/business-architecture-2026-11-06-v1.md) | MTS Math architecture generation chat; `business-architecture.md` v1.0-rc1 | 2026-11-06 | Math business architecture (destination pending) | pending; refined, review-ready candidate; first imported snapshot |
 | [mts/math/ontology/ontology-2026-11-06-v1.md](mts/math/ontology/ontology-2026-11-06-v1.md) | MTS Math architecture generation chat; `ontology.md` v1.0-rc1 | 2026-11-06 | Math ontology (destination pending) | pending; refined, review-ready candidate; first imported snapshot |
+| [mts/math/requirements/requirements-2026-08-23-v1.md](mts/math/requirements/requirements-2026-08-23-v1.md) | `mts-crossmodel`: `docs/references/mts-old/mts-math-requirements.md` | 2026-08-23 | Math requirements (destination pending) | pending; first archived snapshot |
+| [mts/math/design/design-2026-08-23-v1.md](mts/math/design/design-2026-08-23-v1.md) | `mts-crossmodel`: `docs/references/mts-old/mts-math-design.md` | 2026-08-23 (design approval) | Math system design (destination pending) | pending; approved and ready for implementation; first archived snapshot |
 
 Status may be `pending`, `reviewed`, `consolidated` or `deferred`.
 
