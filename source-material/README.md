@@ -43,6 +43,8 @@ Track imported items in the table below. Add rows as sources arrive; do not crea
 | [mts/math/requirements/requirements-2026-08-23-v1.md](mts/math/requirements/requirements-2026-08-23-v1.md) | `mts-crossmodel`: `docs/references/mts-old/mts-math-requirements.md` | 2026-08-23 | Math requirements (destination pending) | pending; first archived snapshot |
 | [mts/math/design/design-2026-08-23-v1.md](mts/math/design/design-2026-08-23-v1.md) | `mts-crossmodel`: `docs/references/mts-old/mts-math-design.md` | 2026-08-23 (design approval) | Math system design (destination pending) | pending; approved and ready for implementation; first archived snapshot |
 
+| [mts/math/product/product-2026-11-07-v1.md](mts/math/product/product-2026-11-07-v1.md) | MTS Math holistic product revision chat; `product.md` v1.2-rc1 | 2026-11-07 | Math product specification (destination pending) | pending; holistic portfolio expansion including notation CAP-19, diagrams CAP-20 and SAT/ACT extrapolation CAP-21; November 6 baseline preserved |
+
 Status may be `pending`, `reviewed`, `consolidated` or `deferred`.
 
 ## Consolidation
