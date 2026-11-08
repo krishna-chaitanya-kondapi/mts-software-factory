@@ -17,6 +17,15 @@ This file is a thin, model-agnostic orientation for human and AI contributors.
 - Do not migrate executable code or establish the permanent architecture without explicit approval.
 - M0–M8 are logical stations, not a requirement for nine separate teams or agents.
 
+## Documentation checkpoint
+
+Before drafting or revising Markdown, apply the strategy's [documentation standard](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#documentation-standard-for-artifact-markdown).
+
+- Lead with a short, plain-language picture of the whole: purpose, relationships, key decisions, status and gaps. Put necessary detail below it.
+- Use a visual that answers a specific question; label relationships and decisions. Avoid acronym-heavy boxes, tangled arrows and repeated flowcharts.
+- Cut repeated explanations and caveats; link to the authoritative fact. Preserve IDs, policies, evidence limits and human gates.
+- Before finishing, check that the overview supports routine review, the visual matches the detail, and no paragraph or table repeats another without adding needed meaning. Shorten the document in place; do not hide verbosity in extra files.
+
 ## Source provenance
 
 This file is a new bootstrap entry point dated 2026-11-01. It does not claim to be an original strategy document or approved architecture.

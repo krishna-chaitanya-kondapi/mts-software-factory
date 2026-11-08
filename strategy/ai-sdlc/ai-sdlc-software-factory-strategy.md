@@ -6,6 +6,8 @@
 
 **Operating principle:** **Humans own intent, judgment and authority. AI accelerates elaboration and execution. Deterministic systems provide evidence.**
 
+**Child deep dive:** [AI Software Factory: Intent Quartet Deep Dive](ai-software-factory-intent-quartet-deepdive.md) models product, business architecture, ontology and requirement-verification mapping as the least intent documents and content sufficient for a human or agent to create the intended product end to end. Content ownership, bounded review and convergence support that creation contract. It is a draft companion, not independent ratification or automation authority.
+
 ---
 
 ## Table of Contents
@@ -34,6 +36,7 @@
 - [16. Pioneer and Implementation Practices Incorporated](#16-pioneer-and-implementation-practices-incorporated)
 - [17. Definition of a Working Software Factory](#17-definition-of-a-working-software-factory)
 - [Appendix A — Acronym References](#appendix-a--acronym-references)
+- [Appendix B — TEVV: Meaning, Boundaries and Examples](#appendix-b--tevv-meaning-boundaries-and-examples)
 
 ---
 
@@ -284,6 +287,21 @@ The factory should expose five review views from the same trace data:
 ### 3B. Human-Reviewable Artifact System by Agent Station
 
 Every M-station owns an authoritative artifact contract. Agents may draft and maintain the artifacts; accountable humans review the one-page view and approve the gate.
+
+#### Documentation standard for artifact Markdown
+
+This standard applies to every authoritative Markdown artifact (`*.md`), including product, ontology, business architecture, requirements, architecture, design, implementation, verification and learning documents, whether the artifact is an aggregate or an independently stored record.
+
+Organize each artifact in this order:
+
+1. **Holistic overview (normally 1–2 pages).** Explain the artifact's purpose, the problem or outcome it addresses, how its major parts fit together, its important decisions and constraints, and the status, evidence, risks and downstream implications a reviewer needs. Use a diagram, flowchart, table or other visualization when it makes the whole easier to understand. The overview should let a human conduct most routine reviews and explain the artifact's essential meaning without reading every detail. It is a substantive account, not merely an abstract or a list of headings.
+2. **Detailed drill-down.** Present the complete content in a logical order, with clear headings, examples where useful, and links to authoritative related artifacts and atomic records. The overview must accurately represent this detail; it must not introduce a separate or conflicting source of truth.
+
+Write in a **Feynman-inspired** style: start from the basic idea, use direct and familiar language, explain why as well as what and how, define specialized terms when introduced, and use concrete examples or analogies when they clarify the concept. Use visuals to expose structure, sequence, comparison or relationships that would otherwise take effort to infer. Simplicity must not erase important qualifications, uncertainty, evidence or trade-offs.
+
+The page count is a target for a useful overview, not a reason to add filler: a genuinely small artifact may need less space, while a broad artifact may use the full two pages. High-risk, ambiguous or consequential decisions still require review of the relevant detailed sections and evidence. Keep the overview current with the artifact and link readers directly to the drill-down.
+
+The overview may serve as the artifact's L1 review lens; do not create a duplicate summary when the same content can meet both needs. Summaries and visualizations aid navigation and review but never silently replace the authoritative artifact or its evidence.
 
 #### Progressive drill-down model
 
@@ -884,3 +902,26 @@ These visual references give illustrative station acronyms and domain examples. 
 ### OMS examples
 
 ![Software factory acronym journey with OMS examples](../images/acronym-reference-oms.png)
+
+---
+
+## Appendix B — TEVV: Meaning, Boundaries and Examples
+
+**TEVV** stands for **Testing, Evaluation, Verification and Validation**. These activities answer related but different questions. Consider one shared example: a product must generate a 20-question Grade 4 fractions worksheet, render it as a readable PDF, and help students practice the intended skill.
+
+| Activity | Main question | What it does | Simple worksheet example | What it does not prove by itself |
+|---|---|---|---|---|
+| **Testing** | Does this behavior or artifact fail a specific check? | Executes or inspects the product against a condition to expose defects. | A script opens the PDF and checks that it contains exactly 20 numbered questions. | Passing one check does not show that every requirement is covered or that the worksheet helps students learn. |
+| **Evaluation** | How well does the output meet a rubric or benchmark? | Measures qualities that may admit degrees of quality or require judgment. | A calibrated rubric scores whether the fraction questions are accurate, varied and appropriate for Grade 4. | A high score is not proof of an exact invariant, such as having 20 questions, unless that invariant is checked directly. |
+| **Verification** | Is there objective evidence that the specified requirements were met? | Connects requirements and acceptance criteria to suitable checks, methods, results and traceable evidence. | The coverage record links the “exactly 20 questions” requirement to the PDF-count test and its passing run evidence; required accuracy and readability criteria have their own evidence. | It does not establish that the specified requirements represent the right need or produce the intended real-world outcome. |
+| **Validation** | Does the result meet the intended need in its actual use? | Assesses fitness for purpose and stakeholder outcomes in the intended context. | A teacher uses the worksheet with students and confirms it supports the planned fractions practice at the expected level. | A favorable classroom result does not replace verification of mandatory requirements, such as the approved question count. |
+
+### How the four fit together
+
+- **Testing is a way to gather evidence.** A test may support verification, evaluation or validation, depending on its question, method and context.
+- **Evaluation measures quality against criteria.** It may support verification when the rubric is a specified criterion, or validation when it measures usefulness in context. Record the rubric, threshold, evaluator and uncertainty.
+- **Verification closes the requirement-to-evidence chain.** It can use tests, inspections, analysis, evaluations or reviews; no single method is mandatory for every criterion.
+- **Validation checks the need and outcome.** It often needs representative users or operational evidence, and can continue after release as usage and outcomes become observable.
+- **Do not collapse the conclusions.** A passing test is not automatically complete verification; verified compliance is not automatically validation; and an evaluation score is not a substitute for a direct check of a deterministic requirement.
+
+For each claim, state which question is being answered, the applicable requirement or intended outcome, the method and its limits, and the evidence and decision owner. A completion report should keep test results, evaluation results, verification status and validation status distinguishable.
