@@ -5,7 +5,7 @@ artifact_id: STRATEGY-INTENT-QUARTET
 artifact_type: strategy-companion
 station: M1-M3
 status: draft
-version: 0.3
+version: 0.4
 owner: MTS product owner / factory methodology owner
 approvers: []
 source_ids: [strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md]
@@ -49,12 +49,12 @@ Product and ontology belong to M1, business architecture to M2, and requirements
 
 ## 1. Content Placement: One Fact, One Home
 
-| Document | Minimum content | MTS example |
-|---|---|---|
-| Product | Users, problem, deliverables, outcomes, scope/exclusions, priorities, imposed constraints and decision owners | Teachers need trustworthy Math/ELA materials; learner analytics are deferred. |
-| Business architecture | Value streams, capabilities, triggers, actors, inputs/outputs, normal/failure/recovery paths, rules, variation and external handoffs | A human authorizes publication; the operator reconciles delivery. |
-| Ontology | Terms, entity identity/revisions, relationships, information ownership, states, valid transitions and invariants | An Ed Material can have several artifact revisions; staging is not delivery. |
-| Requirements and verification | Functional and quality obligations, interface/data constraints, applicability, thresholds, acceptance criteria, independent checks, evidence and intended-use validation | Selected student items and key entries must match by identity and revision. |
+| Document | Purpose | Minimum content | MTS example |
+|---|---|---|---|
+| Product | State what product to create, for whom, why, and within which boundaries. | <ol><li>Users, problem and deliverables.</li><li>Outcomes and measures.</li><li>Scope, exclusions and priorities.</li><li>Constraints and decision owners.</li></ol> | Teachers need trustworthy Math/ELA materials; learner analytics are deferred. |
+| Business architecture | Describe end-to-end business behavior and responsibility that deliver and support the product. | <ol><li>Value streams and capabilities.</li><li>Triggers, actors, inputs and outputs.</li><li>Business process flow, including normal, failure and recovery paths.</li><li>Rules, variation, decisions and external handoffs.</li></ol> | A human authorizes publication; the operator reconciles delivery. |
+| Ontology | Define shared concepts and information so people and systems interpret the product consistently. | <ol><li>Terms and entity identities/revisions.</li><li>Relationships and information ownership.</li><li>States, valid transitions and invariants.</li></ol> | An Ed Material can have several artifact revisions; staging is not delivery. |
+| Requirements and verification | Turn product intent into complete, testable obligations and define how conformance and intended use are established. | <ol><li>Functional and quality obligations.</li><li>Interface/data constraints and applicability.</li><li>Thresholds and acceptance criteria.</li><li>Independent checks, evidence and intended-use validation.</li></ol> | Selected student items and key entries must match by identity and revision. |
 
 A promise, rule, invariant and check may describe different parts of one obligation. Do not independently maintain the same priority, definition, threshold or approval policy in several homes.
 

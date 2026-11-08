@@ -5,7 +5,7 @@ artifact_id: PRODUCT-MTS
 artifact_type: product
 station: M1
 status: draft
-version: 0.3
+version: 0.8
 owner: MTS / Krishna Chaitanya
 approvers: []
 source_ids:
@@ -15,7 +15,20 @@ source_ids:
   - source-material/mts/math/product/product-2026-11-06-v1.md
   - source-material/mts/math/product/product-2026-11-07-v1.md
 requirement_ids: []
-atomic_entity_ids: [INT-MTS-001, OUT-MTS-001, OUT-MTS-002, OUT-MTS-003, OUT-MTS-004, OUT-MTS-005]
+atomic_entity_ids:
+  - INT-MTS-001
+  - OUT-MTS-001
+  - OUT-MTS-002
+  - OUT-MTS-003
+  - OUT-MTS-004
+  - OUT-MTS-005
+  - FA-01-CUR
+  - FA-02-SRC
+  - FA-03-ASM
+  - FA-04-MAT
+  - FA-05-QLT
+  - FA-06-REL
+  - FA-07-IMP
 delta_ids: []
 supersedes: []
 downstream_ids: [BUSINESS-ARCHITECTURE-MTS, ONTOLOGY-MTS, REQUIREMENT-VERIFICATION-MAPPING-MTS]
@@ -24,137 +37,91 @@ last_verified_against: []
 
 ## 1. Holistic Overview
 
-**MTS helps teachers turn learning goals into trustworthy, age- and course-appropriate materials.** Teachers choose what students should learn; MTS supports preparation and independent review; a human authorizes publication.
-
-The educational offering is **MTS Learning, Practice & Assessment**. The **Software Factory** is the reusable system that develops it and other products, not a limit to education.
+**MTS helps teachers turn learning goals into trustworthy Math and ELA materials.** Teachers set the educational intent; MTS helps plan, prepare and verify materials; a human authorizes publication.
 
 ```mermaid
-flowchart TB
-  T["Teacher<br/>Approves goals and learners"] --> M["MTS<br/>Prepares and checks materials"]
-  M --> H{"Human<br/>Authorizes release"}
-  H -->|Approved| L["Learners<br/>Use delivered materials"]
-  H -->|Revise| M
-  L -.->|Coverage and feedback| T
+flowchart LR
+  Intent["Learning goals"] --> Plan["Plan"]
+  Plan --> Create["Select or create"]
+  Create --> Verify["Prepare and verify"]
+  Verify --> Gate{"Human approves?"}
+  Gate -->|Revise| Create
+  Gate -->|Approve| Deliver["Deliver"]
+  Deliver --> Learn["Observe and improve"]
+  Learn -.->|Approved change| Plan
 ```
 
-Math and ELA are current subjects. The [portfolio](#3-portfolio-and-priorities) starts with curriculum, practice, answer support, source-based assessments and release controls. Standalone teaching/reference materials and diagnostics come later; learner analytics and SAT/ACT estimates are deferred.
+MTS is the educational product; the Software Factory is the system used to develop it. The product is **draft** and the quartet is not yet sufficient to create the full declared scope end to end. Remaining gaps are tracked in the [requirement-verification mapping](requirement-verification-mapping.md#gaps-and-next-decisions).
 
-Success means suitable scope, trustworthy answers, responsible sources, usable delivery and measurable improvement. [Outcome measures](#7-quality-and-outcome-measures) define those directions; targets require baselines.
-
-**Status: Draft, not fully ratified.** Individual product decisions are preserved, but implementation/release maturity is unassessed. The quartet is not yet sufficient for full-product creation: subject criteria, profiles, exceptions and evidence remain [open](requirement-verification-mapping.md#gaps-and-next-decisions). Version 0.3 shortens presentation without changing scope or gates.
-
-## Intent and Outcome Baseline
+## 2. Intent and Users
 
 <a id="int-mts-001"></a>**INT-MTS-001:** Help teachers turn approved learning goals into trustworthy educational materials, improving preparation and learning through accountable review and feedback.
 
-This document owns purpose, audience, portfolio and outcomes. [Business architecture](business-architecture.md) owns value delivery and rules; [ontology](ontology.md) owns meaning; [requirements and verification](requirement-verification-mapping.md) own completion conditions. Together they follow the [minimum sufficient intent model](strategy/ai-sdlc/ai-software-factory-intent-quartet-deepdive.md).
-
-## 2. Audience, Inputs and Outputs
-
-| Who | Need and value |
+| User | Product value |
 |---|---|
-| Teachers / curriculum owners | Plan progression and prepare materials with less correction work |
-| Students / families | Understand, practice and demonstrate learning with dependable explanations |
-| Subject reviewers / release operators | Inspect quality evidence and deliver the authorized set |
-| Future school/program partners | Adapt materials through explicit, approved variation |
+| Teachers / curriculum owners | Plan learning and prepare materials |
+| Students / families | Learn and practice with dependable materials |
+| Subject reviewers / release operators | Review evidence and deliver the approved set |
 
-**Inputs:** Learners/grade/course, objectives, period, curriculum/standards evidence, source permissions, purpose, artifacts, answer depth, profile and destination.
+Runs may be weekly, class-based, topic-based or source-based. Required formats and detail depend on the approved subject and artifact profile.
 
-**Outputs:** Student/teacher materials, applicable answers or rubrics, source/selection records, verification, approval, publication, coverage and observations.
+## 3. Functional Areas and Capabilities
 
-A run may cover a week, class, topic or source assessment. Editable/print-ready formats depend on the selected supported profile.
+<a id="functional-areas-and-capabilities"></a>
 
-## 3. Portfolio and Priorities
+The sequence follows value creation. Area IDs combine sequence and a short name; capability IDs remain in the [business architecture](business-architecture.md#functional-areas-and-capabilities).
 
-| Priority | Offering and scope |
+| Sequence | Functional area | Key capabilities and scope |
+|---:|---|---|
+| 1 | <a id="fa-01-cur"></a>**FA-01-CUR — Curriculum & Run Planning** | Define learners, courses and run scope; plan objectives, progression and assessment. **Initial** |
+| 2 | <a id="fa-02-src"></a>**FA-02-SRC — Content & Source Management** | Discover sources; select, transform or author content (**initial**). Standalone lessons and references are **later**. |
+| 3 | <a id="fa-03-asm"></a>**FA-03-ASM — Learning, Practice & Assessment** | Design practice and assessments; provide answers, solutions and rubrics (**initial**). Diagnostics are **later**; learner analysis and SAT/ACT estimates are **deferred**. |
+| 4 | <a id="fa-04-mat"></a>**FA-04-MAT — Educational Material Production** | Compose and render student/teacher materials; support Math notation and visuals. **Initial** |
+| 5 | <a id="fa-05-qlt"></a>**FA-05-QLT — Quality & Verification** | Independently review educational content and rendered artifacts. **Initial** |
+| 6 | <a id="fa-06-rel"></a>**FA-06-REL — Release & Delivery** | Authorize, publish and reconcile the approved materials. **Initial** |
+| 7 | <a id="fa-07-imp"></a>**FA-07-IMP — Coverage & Improvement** | Track confirmed curriculum coverage and learn from defects. **Initial** |
+
+**Priority** describes intended product scope, not implementation maturity. Math and ELA are current subjects; other subjects are not committed scope.
+
+## 4. Educational Material
+
+The catalog combines shared deliverables and records subject-specific structure in notes. `#` gives the overall priority sequence. Periodicity is a typical trigger, not a fixed calendar.
+
+| # | Educational material | Short description | Subject | Periodicity | Math notes / structure | ELA notes / structure |
+|---:|---|---|---|---|---|---|
+| 1 | Weekly practice worksheet | Builds planned practice across the instructional period. | Math, ELA | Weekly | Grade/course and week; daily sections; approved practice mix; questions. | Grade/week; passages; comprehension and vocabulary; evidence references as applicable. |
+| 2 | Answer and solution key | Provides teacher answers and support matched to assessable materials. | Math, ELA | With each assessable worksheet/test | Item-matched answers; worked methods; scoring where applicable. | Item-matched answers; passage evidence/rationale; acceptable responses where relevant. |
+| 3 | Topic cheatsheet / summary sheet | Supports concise review and recall. | Math, ELA | Per topic, unit or revision period | Concepts/formulas; method steps; checked examples; conditions. | Key language/reading/writing concepts; concise rules; examples or vocabulary. |
+| 4 | Mock / benchmark assessment | Measures learning under specified assessment conditions. | Math, ELA | Per assessment window or request | Selected questions; preserve source notation/figures; timing/scoring when specified. | Selected passages/items; timing/scoring when specified; answer mapping. |
+| 5 | Class / topic practice | Focuses practice on a lesson, session or skill. | Math, ELA | Per class, topic or assignment | Learning target; examples/directions; sequenced practice; key as needed. | Grammar, vocabulary, writing or reading tasks; texts/prompts; rubric/key as needed. |
+| 6 | Lesson plan / teaching notes | Guides instruction for a lesson or sequence. | Math, ELA | Per lesson or unit | Objectives; teaching sequence; activities/examples; checks for understanding. | Objectives; teaching sequence; texts/examples; activities; checks for understanding. |
+| 7 | Diagnostic / readiness assessment | Identifies readiness or gaps for a bounded purpose. | Math, ELA | When a readiness decision is needed | Target skills/items; scoring assumptions; interpretation and uncertainty. | Reading/language targets; diagnostic prompts; scoring rubric; interpretation and uncertainty. |
+
+## 5. Product Outcomes
+
+<a id="product-outcomes"></a>
+
+These are intended results, not claims of achieved performance. Detailed requirements and checks live in the [M3 mapping](requirement-verification-mapping.md).
+
+| Outcome | Intended result |
 |---|---|
-| Initial | Curriculum planning, progression, pacing evidence and released coverage |
-| Initial | Math weekly/class worksheets and genuine reasoning |
-| Initial | ELA reading, vocabulary, grammar, writing and integrated activities |
-| Initial | Single-topic practice, homework, revision, remediation and enrichment |
-| Initial | Keys, concise explanations, worked solutions, approved teacher methods, model responses and writing rubrics |
-| Initial | Faithful or authorized transformed source-based mock tests and benchmarks |
-| Initial | Accurate Math notation, graphs and diagrams |
-| Initial | Provenance, independent quality review, human release approval and publication tracking |
-| Later | Lesson plans, guided activities and standalone topic explanations |
-| Later | Study notes, cheat sheets, formula sheets and language-rule references |
-| Later | Short diagnostics and readiness checks |
-| Deferred | Learner performance/error analysis and suggested next practice |
-| Deferred | SAT estimates/interpretation and ACT estimates/interpretation |
+| <a id="out-mts-001"></a>**OUT-MTS-001 — Scope fidelity** | Approved objectives and artifacts are accounted for; exclusions are respected. |
+| <a id="out-mts-002"></a>**OUT-MTS-002 — Educational correctness** | Released assessable content and its support receive independent review. |
+| <a id="out-mts-003"></a>**OUT-MTS-003 — Source integrity** | Source, permission and required fidelity are clear. |
+| <a id="out-mts-004"></a>**OUT-MTS-004 — Artifact and release integrity** | The approved materials are matched, checked and delivered to the confirmed destination. |
+| <a id="out-mts-005"></a>**OUT-MTS-005 — Improvement** | Baseline evidence and observations guide approved improvements. |
 
-Support explanations are initial even though standalone lessons are later. Source-based mocks are initial even though diagnostics are later. Curriculum/release tracking is initial; student-level analytics are not.
+Set numerical targets only after measures, privacy controls and a baseline are agreed.
 
-Priority is sequencing, not proof of maturity or implementation authority. Previously approved ELA scope is retained. Physics/Science are future possibilities, not current commitments.
+## 6. Boundaries and Decision Rights
 
-## Functional Areas and Capabilities
+- Teachers own learning goals; the product owner owns product scope and priorities.
+- Subject reviewers judge educational suitability; a named human authorizes publication.
+- MTS does not silently change intent, bypass source permissions or treat staging as publication.
+- Business flows and rules belong in [business architecture](business-architecture.md); shared terms belong in the [ontology](ontology.md); acceptance and evidence belong in the [M3 mapping](requirement-verification-mapping.md).
 
-The [business catalog](business-architecture.md#functional-areas-and-capabilities) groups capabilities into curriculum, content, practice/assessment, Ed Material production, release, and verification/improvement. It owns their definitions and decomposition.
+## 7. Open Decisions
 
-Earlier product labels `MTS-C01` through `MTS-C16` correspond to `CAP-001` through `CAP-016` in this consolidated draft only; historical source IDs retain their own meanings.
+Close the subject-specific behavior, artifact profiles, exception authority, release semantics and verification criteria needed for the agreed Math and ELA scope. Establish current maturity and outcome baselines with evidence. The [gap register](requirement-verification-mapping.md#gaps-and-next-decisions) is the authoritative detail.
 
-## 4. Subject Scope and Pedagogy
-
-| Subject | Required emphasis |
-|---|---|
-| Math | Grade/course progression; focused/current/spiral/reasoning (F/C/S/R) practice with run-specific counts, ratios and schedules. Review results, methods, units and assumptions; a requested method must not invalidate other correct methods. |
-| Math representation | Preserve meaning across words, equations, tables, graphs and figures. Check grouping, labels, axes, scales, geometry and readability through extraction/editing/export; distinguish source figures from new illustrations. |
-| ELA | Reading, vocabulary, grammar, writing; literary/informational prose and poetry as appropriate. Review suitability, source fidelity, passage evidence, line references, distractors and defensible interpretations. |
-| ELA support | Contextual vocabulary, editing, composition, model responses and rubrics. Confirm the approved PQYA/YPQA method; writing/interpretation can admit several valid responses. |
-
-## 5. Product Variation and Source Integrity
-
-Each approved run selects learner context, objectives, period, purpose, source/transformation, artifact set, answer depth, presentation and destination.
-
-Sources may be ready-made content, raw text/tests, teacher-authored, generated or hybrid. Transformations range from faithful reproduction and selection to permitted adaptation, synthesis and original authoring. Record origin/version, permissions and item-level lineage; identify generated/adapted content honestly. Missing or unauthorized sources require a decision, not silent substitution.
-
-Run overrides do not become global defaults. Enabled grades are not automatically selected. Profiles own controlled counts, typography and formats; approval governs their applicability.
-
-## 6. Presentation and Release
-
-Use the approved subject/artifact profile, not a universal page limit. [Business rules](business-architecture.md#business-rules) own the exact ELA weekly target, Math weekly maximum and source-mock limits. [REQ-MTS-009](requirement-verification-mapping.md#req-mts-009) checks actual exports for readability, intact content, notation and correspondence.
-
-Math retains **five distinct human checkpoints**: scope, content, verification, formatting and publication; see the [checkpoint flow](business-architecture.md#math-checkpoint-flow). ELA requires independent semantic/artifact review, mandatory QA and named human publication approval; detailed ELA checkpoints remain open.
-
-Evidence/approval is revision-bound. Renew affected reviews after change. Certification or staging is not publication authority.
-
-## 7. Quality and Outcome Measures
-
-| Outcome | Agreed measure |
-|---|---|
-| <a id="out-mts-001"></a>OUT-MTS-001 Scope fidelity | Account for every approved objective/artifact, including authorized exceptions |
-| <a id="out-mts-002"></a>OUT-MTS-002 Educational correctness | Independently review every released assessable item and answer/rubric for correctness and suitability |
-| <a id="out-mts-003"></a>OUT-MTS-003 Source integrity | Record every external item's provenance/permission and preserve authorized fidelity/transformation |
-| <a id="out-mts-004"></a>OUT-MTS-004 Artifact/release integrity | Check matching artifacts, required QA, human approval and actual destination |
-| <a id="out-mts-005"></a>OUT-MTS-005 Improvement | Baseline preparation time, review effort, rework, escaped defects and learning outcomes before numerical targets |
-
-Checks report pass, fail, unverified and justified exclusions/exceptions separately. Missing mandatory evidence blocks certification unless an applicable authorized exception permits it; human release approval remains required. Material-quality checks alone do not prove learning improvement.
-
-## 8. Ownership and Product Boundaries
-
-The product owner approves intent/priority; teachers and subject reviewers judge educational suitability; a named human approves release and an operator confirms delivery. Factory services support orchestration/versioning/evidence but do not own educational judgment.
-
-MTS must not choose learning goals without teacher approval, publish unselected grades, bypass source rights, count self-review as independence or present unofficial estimates as official scores. Privacy, consent, retention, accessibility and detailed authorization remain requirements work.
-
-## Product Information
-
-The [ontology catalog](ontology.md#entity-catalog) defines the records behind a release: objective/audience, run/profile, source/transformation, selected content/support, verification/decision, release/coverage and observation/change. It owns their identities and relationships.
-
-## 9. Maturity and Evidence
-
-Assess each capability by subject, scope and version, with separate evidence for proposed, implemented, verified, released, observed and accepted states.
-
-Historical sources claim comparatively mature Math weekly production, ELA reading production and Math mock formatting. These are not current verified assignments. November 6-7 Math documents cite a November 9 batch: resolve the date/evidence before relying on it.
-
-## 10. Open Decisions and Next Work
-
-Ratify the named product/release scope; reconcile shared/subject meaning and ownership; close subject/profile, exception and evidence gaps; inventory actual maturity; baseline effort and learning measures with privacy/consent controls. The [gap register](requirement-verification-mapping.md#gaps-and-next-decisions) tracks owners and affected gates.
-
-## 11. Source Provenance
-
-Historical inputs are preserved, not automatically authoritative:
-
-- [ELA November 5 baseline](source-material/mts/ela/product/product-2026-11-05-v1.md): approved subject scope, print target and release authority.
-- [ELA November 7 revision](source-material/mts/ela/product/product-2026-11-07-v1.md): proposed broader modes, sources and support.
-- [Math August retrospective](source-material/mts/math/product/product-2026-08-23-v1.md): unapproved synthesis of requirements/design, including five gates.
-- [Math November 6 candidate](source-material/mts/math/product/product-2026-11-06-v1.md) and [November 7 revision](source-material/mts/math/product/product-2026-11-07-v1.md): broader practice/assessment, visuals and proposed estimates.
-- [Source inventory](source-material/README.md) and [factory strategy](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md): provenance and engineering method.
+Historical inputs and their provenance are recorded in the document metadata and [source inventory](source-material/README.md); they are evidence, not automatic authority.

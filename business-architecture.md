@@ -5,7 +5,7 @@ artifact_id: BUSINESS-ARCHITECTURE-MTS
 artifact_type: business-architecture
 station: M2
 status: draft
-version: 0.3
+version: 0.6
 owner: MTS / Krishna Chaitanya
 approvers: []
 source_ids:
@@ -25,24 +25,26 @@ last_verified_against: []
 
 **MTS turns approved learning needs into reviewed, delivered materials, then learns from coverage and defects.** This is the business flow: what happens and who decides, not software architecture.
 
+### Business Process Flow
+
 ```mermaid
 flowchart TB
-  Plan["Teacher / curriculum owner<br/>Approve scope and progression"]
-  Author["Author<br/>Select sources, content and support"]
-  Review["Independent reviewers<br/>Check subject meaning and exports"]
-  Gate{"Human approver<br/>Authorize this revision?"}
-  Deliver["Release operator<br/>Publish and confirm destination"]
-  Learn["Curriculum / quality owners<br/>Reconcile coverage and diagnose defects"]
-  Plan --> Author --> Review --> Gate
-  Gate -->|Yes| Deliver --> Learn
-  Gate -->|Revise| Author
-  Review -->|Defect| Learn
-  Learn -.->|Approved corrective change| Plan
+  Start["Teacher learning need"] --> Plan["BP-001 Scope<br/>BP-002 Plan progression"]
+  Plan --> Create["BP-003 Source and author"]
+  Create --> Review["BP-004 Independent review<br/>BP-005 Compose and inspect"]
+  Review --> Gate{"BP-006<br/>Human authorizes release?"}
+  Gate -->|Revise| Fix["Return to earliest<br/>affected step"]
+  Gate -->|Approve| Publish["Publish authorized set"]
+  Publish --> Coverage["BP-007<br/>Reconcile released coverage"]
+  Coverage --> Learn["BP-008<br/>Review observations and improve"]
+  Learn --> Decision{"Owner approves change?"}
+  Decision -->|No / blocked| Stop["Record decision or escalate"]
+  Decision -->|Yes| Update["Apply approved delta<br/>to next run or affected step"]
 ```
 
-The flow serves Math and ELA with subject-specific review. All five Math checkpoints remain mandatory; ELA requires independent review and human publication approval. [Rules](#business-rules) and [processes](#business-processes) define the handoffs.
+This is the end-to-end [business process flow](#business-process-flow). Material defects may enter BP-008 before release; revisions return to the earliest affected step. The flow serves Math and ELA with subject-specific review. All five Math checkpoints remain mandatory; ELA requires independent review and human publication approval. [Rules](#business-rules) and [processes](#business-processes) define the handoffs.
 
-**Status: Draft, not ratified or proven implemented.** Version 0.3 simplifies presentation while preserving IDs, rules and gates. Priorities follow the [product portfolio](product.md#3-portfolio-and-priorities); evidence is unassessed. Key gaps are ELA checkpoints, exception authority, profiles and release semantics; see [open decisions](#open-decisions).
+**Status: Draft, not ratified or proven implemented.** Version 0.6 aligns the functional-area sequence with [product.md](product.md#functional-areas-and-capabilities). Business capability IDs, rules and gates are unchanged. Evidence is unassessed. Key gaps are ELA checkpoints, exception authority, profiles and release semantics; see [open decisions](#open-decisions).
 
 ## Value Streams
 
@@ -55,18 +57,21 @@ A value stream follows a need to its result; a capability is an enduring ability
 
 VS-002 can start before release. Coverage counts only confirmed delivery; neither stream implies a separate team or automated system.
 
+BP-009 lessons/references and BP-010 diagnostics are selected variations: they extend content planning/authoring before the same review, composition and release controls. Math's five checkpoints refine its path below; ELA's detailed checkpoint mapping remains open.
+
 ## Functional Areas and Capabilities
 
-This catalog owns decomposition; [ontology](ontology.md#terms-and-boundaries) owns meaning. Prior product labels MTS-C01-MTS-C16 correspond to same-numbered CAP IDs here only, not historical IDs. Area names/groupings remain proposed.
+This catalog owns business decomposition; [ontology](ontology.md#terms-and-boundaries) owns meaning. Product areas use the corresponding FA-##-XXX IDs; business capabilities retain the CAP IDs below. Historical source IDs retain their original meanings. Area names/groupings remain proposed.
 
-| Functional area | Responsibility / capabilities |
-|---|---|
-| <a id="fa-001"></a>FA-001 Curriculum Design | Scope and progression: CAP-001, 002 |
-| <a id="fa-002"></a>FA-002 Content Management | Provenance and content: CAP-003-005 |
-| <a id="fa-003"></a>FA-003 Practice and Assessment Design | Items, support and assessment: CAP-006-010 |
-| <a id="fa-004"></a>FA-004 Ed Material Production | Composition and representations: CAP-011, 012 |
-| <a id="fa-005"></a>FA-005 Release and Delivery | Publication and reconciliation: CAP-014 |
-| <a id="fa-006"></a>FA-006 Verification, Validation and Improvement | Independent review, coverage and learning: CAP-013, 015, 016 |
+| Sequence | Business functional area | Product area | Responsibility / capabilities |
+|---:|---|---|---|
+| 1 | <a id="fa-001"></a>FA-001 Curriculum Design | FA-01-CUR | Scope and progression: CAP-001, 002 |
+| 2 | <a id="fa-002"></a>FA-002 Content Management | FA-02-SRC | Provenance and content: CAP-003-005 |
+| 3 | <a id="fa-003"></a>FA-003 Practice and Assessment Design | FA-03-ASM | Items, support and assessment: CAP-006-010 |
+| 4 | <a id="fa-004"></a>FA-004 Educational Material Production | FA-04-MAT | Composition and representations: CAP-011, 012 |
+| 5 | <a id="fa-005"></a>FA-005 Verification and Validation | FA-05-QLT | Independent review: CAP-013 |
+| 6 | <a id="fa-006"></a>FA-006 Release and Delivery | FA-06-REL | Publication and reconciliation: CAP-014 |
+| 7 | <a id="fa-007"></a>FA-007 Coverage and Improvement | FA-07-IMP | Coverage and learning: CAP-015, 016 |
 
 | ID | Capability -> business result | Product priority |
 |---|---|---|
@@ -103,6 +108,8 @@ This catalog owns decomposition; [ontology](ontology.md#terms-and-boundaries) ow
 | <a id="bp-010"></a>BP-010 Later diagnostics | 008, 011, 013 | Diagnostic scope -> reviewed diagnostic material | Teacher / assessment reviewer |
 
 Capability numbers above use the CAP namespace. Later processes are variations, not separate engines. Deferred analytics/estimates have no active process.
+
+The [business process flow](#business-process-flow) shows the end-to-end sequence and decision path; this table specifies each process's inputs, outputs and responsible roles.
 
 ### Math checkpoint flow
 
@@ -168,7 +175,7 @@ Verification asks whether specified conditions hold; validation asks whether the
 
 ## Measures and Traceability
 
-Business measures follow the [five product outcomes](product.md#7-quality-and-outcome-measures). For example, trusted answers connect OUT-MTS-002 -> CAP-007/013 -> BP-004/005 -> RULE-003/004 -> [REQ-MTS-003/004 and their checks](requirement-verification-mapping.md#requirement-and-acceptance-catalog). This is a draft trace, not execution evidence.
+Business measures follow the [product outcomes](product.md#product-outcomes). For example, trusted answers connect OUT-MTS-002 -> CAP-007/013 -> BP-004/005 -> RULE-003/004 -> [REQ-MTS-003/004 and their checks](requirement-verification-mapping.md#requirement-and-acceptance-catalog). This is a draft trace, not execution evidence.
 
 BP-008 implements the business improvement flow; the [factory L1/L2/L3 policy](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3d-closed-loop-convergence-and-recovery) governs repair versus specification/intent changes.
 

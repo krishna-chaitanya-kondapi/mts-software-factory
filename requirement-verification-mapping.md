@@ -38,7 +38,7 @@ last_verified_against: []
 
 ## Holistic Overview
 
-**This document says what MTS must do and what would prove it.** It connects [product outcomes](product.md#7-quality-and-outcome-measures), [business rules](business-architecture.md#business-rules) and [shared meaning](ontology.md) to requirements, acceptance conditions and independent checks.
+**This document says what MTS must do and what would prove it.** It connects [product outcomes](product.md#product-outcomes), [business rules](business-architecture.md#business-rules) and [shared meaning](ontology.md) to requirements, acceptance conditions and independent checks.
 
 Here is one concrete chain, not a claim of passing evidence:
 
@@ -99,7 +99,7 @@ These are planned checks, not executed passes. ELA checkpoint/exception design, 
 
 ## Capability Coverage and Disposition
 
-Priorities follow the [product](product.md#3-portfolio-and-priorities). Numbers in the middle column are REQ-MTS suffixes. **Partial** means shared controls only, not capability completion.
+Priorities follow the [product functional areas and capabilities](product.md#functional-areas-and-capabilities). Numbers in the middle column are REQ-MTS suffixes. **Partial** means shared controls only, not capability completion.
 
 | Capability | Mapped controls | Missing behavior/design |
 |---|---|---|
