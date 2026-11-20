@@ -3,6 +3,24 @@
 [Previous: 01-product](01-product.md) · [Level 1 index](README.md) · [Next: 03-definition-of-done](03-definition-of-done.md) · 2 of 4
 **ID:** RVC-ARCH-MTS-L1 · **State:** To-be conceptual review with known operating context · **Status:** Approved conceptual review view · **Revision:** 2 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** MTS architecture owner (role)
 
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. Historical status/revision above refers to the baseline, not this candidate. [Baseline and checks](REVIEW-REPORT.md).
+
+## Reading guide
+- [Overview](#holistic-overview) · [Business process](#l1--business-process-landscape-rvc-l1-bpl) · [Information](#i1--domain-concept-map-rvc-i1-dcm) · [System context](#c1--system-context-rvc-c1-scd) · [Cross-axis review](#cross-axis-review)
+- [Quality](#q1--quality-attribute-matrix) · [Technology](#t1--technology-landscape) · [Cost](#b1--cost--resource-model) · [Responsibility](#r1--responsibility--authority-matrix) · [Security](#s1--trust-boundary--security-map) · [Approval evidence](#review-approval-and-source-fidelity)
+
+## Architecture in plain language
+A trustworthy educational artifact requires coordinated work, information and participating systems. The three axes describe these separate views of the same product; overlays constrain them rather than create five more independent systems. The canonical overview below shows the relationships. Existing legacy evidence and proposed controls must remain distinct.
+
+| View | Question | Illustrative MTS example |
+|---|---|---|
+| Functional | What work occurs? | Select questions, compose worksheet, check answers |
+| Information | What concepts and relationships are managed? | Question, source, answer and artifact revision |
+| Application | Which systems participate? | Generation tooling and delivery services |
+| Overlay | What constraint applies across the axes? | Human release authority, privacy, quality and resource limits |
+
+Computing analogy: a function, its data model and its runtime differ but work together. Human physiology analogy: digestion is a function, nutrients are material inputs, and organs carry out the work; biological organs are not software components. These analogies clarify viewpoints, not implementation mappings.
+
 ## Holistic overview
 
 Three axes explain what MTS does, what information it manages and which systems participate. Five overlays constrain all three. Use the current implementation as the starting point, not as proof that every target control works. The minimum controls below guide [execution](04-factory.md) and [completion](03-definition-of-done.md).

@@ -1,0 +1,54 @@
+version: 0.1.0
+status: proposed-pilot
+shared_standard: ../reviewability-engineering/REVIEWABILITY-STANDARD.md
+statuses: [PASS, FAIL, NOT_VERIFIED, NOT_APPLICABLE]
+evidence_required: true
+criteria:
+  - id: DE-01
+    requirement: Explain concepts from first principles and why they matter.
+    applies_when: conceptual_explanation
+    related_re: [RE-05, RE-06]
+    method: semantic_review
+    blocking: true
+  - id: DE-02
+    requirement: Provide a substantive overview targeting one to two pages or less; justify exceptions.
+    applies_when: substantial_document
+    related_re: [RE-07, RE-11]
+    method: structural_and_semantic_review
+    blocking: true
+  - id: DE-03
+    requirement: Compare related terms using definitions, distinctions and examples.
+    applies_when: related_or_confusable_concepts
+    related_re: [RE-05, RE-09]
+    method: semantic_review
+    blocking: true
+  - id: DE-04
+    requirement: Use concrete implementation-specific examples; label illustrative examples.
+    applies_when: technical_or_operational_explanation
+    related_re: [RE-05]
+    method: source_grounded_review
+    blocking: true
+  - id: DE-05
+    requirement: Use human anatomy or physiology and computing mental models when useful; state limits.
+    applies_when: analogy_improves_understanding
+    related_re: [RE-09]
+    method: semantic_review
+    blocking: true
+  - id: DE-06
+    requirement: Use precise vocabulary, clear grammar and purposeful sentences.
+    applies_when: prose
+    related_re: [RE-09, RE-11]
+    method: language_review
+    blocking: true
+  - id: DE-07
+    requirement: Provide table of contents, reading order and navigable drill-downs where applicable.
+    applies_when: substantial_or_multi_document
+    related_re: [RE-10]
+    method: link_and_structure_check
+    blocking: true
+  - id: DE-08
+    requirement: Match structure and depth to document intent without duplicating authoritative content.
+    applies_when: all_documents
+    related_re: [RE-01, RE-07, RE-11]
+    method: semantic_review
+    blocking: true

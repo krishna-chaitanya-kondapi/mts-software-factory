@@ -27,3 +27,6 @@ The Intent Quartet and governing AI-SDLC strategy remain authoritative for produ
 
 All five SVGs in this initial package are newly authored canonical-source **drafts**, not byte-exact exports of earlier inline conversation graphics. Their approval and visual fidelity are not inferred from the authorization to persist the standard. Future visual approval must bind the exact rendered source revision.
 
+
+## Companion documentation guidance
+[Documentation Engineering v0.1](../documentation-engineering/README.md) is a proposed companion for authorized pilots. Existing RE criteria, review levels, canonical fidelity and approvals remain authoritative; combine applicable DE and RE checks in one report.

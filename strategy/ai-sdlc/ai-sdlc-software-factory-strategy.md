@@ -292,6 +292,8 @@ Every M-station owns an authoritative artifact contract. Agents may draft and ma
 
 #### Documentation standard for artifact Markdown
 
+The proposed [Documentation Engineering companion](../documentation-engineering/README.md) elaborates this existing guidance for authorized pilots; it does not supersede the strategy or adopted Reviewability Engineering rules. Its reading-depth guidance is independent of both the review-depth taxonomy and the station artifact hierarchy below.
+
 This standard applies to every authoritative Markdown artifact (`*.md`), including product, ontology, business architecture, requirements, architecture, design, implementation, verification and learning documents, whether the artifact is an aggregate or an independently stored record.
 
 Organize each artifact in this order:

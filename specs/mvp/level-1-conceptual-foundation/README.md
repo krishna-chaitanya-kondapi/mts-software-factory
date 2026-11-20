@@ -1,6 +1,6 @@
 # Level 1 — Conceptual Foundation
 
-**Status:** All four Level 1 review documents individually approved. Overall Reviewability Engineering completion audit pending; implementation readiness is not established.
+**Status:** Documentation Engineering v0.1 candidate pilot; revised documents await human approval. The baseline had all four Level 1 review documents individually approved. Overall Reviewability Engineering completion audit pending; implementation readiness is not established.
 
 | Document | Review views | Existing authoritative inputs |
 |---|---|---|
@@ -41,3 +41,6 @@ Use a bounded representative workflow (candidate: weekly worksheet generation), 
 Canonical SVGs are grouped under `diagrams/` by owning document, with original filenames and bytes preserved. They remain embedded in the documents.
 
 [Diagram folders](diagrams/) · [MVP overview](../README.md) · [Next: Level 2](../level-2-logical-detail-and-structured-contracts/README.md)
+
+## Documentation pilot
+[Composite review report](REVIEW-REPORT.md) · [Proposed standard](../../../strategy/documentation-engineering/README.md). Read Product, Architecture, Definition of Done, Factory in the existing order. The new introductory explanation and navigation are candidates; all historical approvals apply only to the baseline.

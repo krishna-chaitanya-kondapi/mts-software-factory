@@ -3,6 +3,24 @@
 [Previous: 02-architecture](02-architecture.md) · [Level 1 index](README.md) · [Next: 04-factory](04-factory.md) · 3 of 4
 **ID:** RVC-V1-MTS · **State:** To-be review contract · **Status:** Approved conceptual review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** product/quality owner (roles)
 
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. Historical status/revision above refers to the baseline, not this candidate. [Baseline and checks](REVIEW-REPORT.md).
+
+## Reading guide
+- [Definition of Done](#holistic-definition-of-done) · [Layers](#seven-verification-layers) · [Scopes](#completion-scopes) · [Methods](#verification-methods) · [Minimum controls](#minimum-completion-review) · [Gates](#stage-and-overall-gate) · [States](#completion-states-and-evidence-accounting) · [Approval](#review-approval-and-fidelity)
+
+## Understand completion first
+A generated artifact is not necessarily correct, and a correct artifact is not necessarily authorized for release. Define the acceptable state before execution; select checks and rubrics, collect evidence against the exact revision, correct failures within authority and obtain human acceptance where required. The diagrams and existing criteria below describe the conceptual contract, not proof of a successful current run.
+
+| Concept | Distinction | Illustrative MTS example |
+|---|---|---|
+| Requirement | What must be true | Student worksheet and key correspond |
+| Verification | Check against specified criteria | Match item IDs and independently solve Math items |
+| Evaluation | Judge suitability using criteria or rubric | Assess ELA distractor and passage quality |
+| Definition of Done | Applicable completion conditions | All blocking requirements and checks satisfied, with required acceptance rules |
+| Acceptance | Authorized decision | Human approves the exact verified revision |
+
+Computing analogy: assertions and tests provide evidence before deployment; they do not confer deployment permission. Physiological analogy: measured vital signs can inform clinical judgment but do not alone establish recovery. Neither analogy replaces the actual completion contract.
+
 Completion is evidence against the approved scope, not confidence in generated content. The actual run uses a revision-bound completion contract (FCC) selecting applicable criteria, thresholds, rubrics, regression scope, budgets, evidence and human gates.
 
 ## Holistic Definition of Done

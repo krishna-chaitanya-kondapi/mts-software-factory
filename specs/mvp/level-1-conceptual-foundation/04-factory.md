@@ -3,6 +3,25 @@
 [Previous: 03-definition-of-done](03-definition-of-done.md) · [Level 1 index](README.md) · [Next level](../level-2-logical-detail-and-structured-contracts/README.md) · 4 of 4
 **ID:** RVC-FACTORY-MTS-L1 · **State:** To-be minimum operating model · **Status:** Approved conceptual review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** factory owner (role)
 
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. Historical status/revision above refers to the baseline, not this candidate. [Baseline and checks](REVIEW-REPORT.md).
+
+## Reading guide
+- [Operating model](#holistic-operating-model) · [Knowledge](#k1--knowledge--context-map) · [Harness](#e1--harness--execution-engineering) · [Lifecycle](#e1--execution-lifecycle-map) · [Convergence](#n1--convergence--recovery-map) · [Observability](#o1--observability--learning-map) · [Overlays](#enforce-the-architecture-overlays-during-a-run) · [Delivery](#persistence--delivery) · [Evidence](#review-approval-and-source-fidelity)
+
+## Factory in plain language
+Intent defines the desired outcome; knowledge and context make relevant facts and instructions available; the harness enables execution; verification evaluates the result; convergence corrects gaps; observability records what happened and supports learning. Governance constrains all of these. For a weekly worksheet run, resolve the approved inputs, generate and check the worksheet/key, correct failed checks within bounds, and reconcile authorized delivery. This is an illustrative target flow, not evidence of a new run. Factory development, workflow design and production runs remain distinct.
+
+| Concept | Distinction | Computing analogy | Human physiology analogy |
+|---|---|---|---|
+| Knowledge / context | Available facts vs task-relevant selection | Storage vs loaded runtime state | Memory vs current sensory signals |
+| Harness | Execution and tool access | Runtime, APIs and I/O | Nervous and musculoskeletal systems |
+| Verification | Compare outcome against criteria | Assertions and tests | Physiological monitoring |
+| Convergence | Bounded progress toward acceptable state | Iterative solver with stop condition | Homeostatic feedback |
+| Observability / learning | Inspect execution vs improve future behavior | Tracing vs feedback-driven changes | Sensory monitoring vs neuroplasticity |
+| Guardrails | Restrict unacceptable action | Permissions and isolation | Immunity and protective reflexes |
+
+Analogies are limited functional comparisons, not literal equivalences. Iteration alone does not guarantee progress; termination may mean acceptance or escalation. The detailed canonical views below retain their existing authority and evidence limits.
+
 The engineering factory uses M0–M8 to build the product. The educational product uses PreRun / Run / PostRun to generate materials. Both need verifiable completion, correction and observation; their run IDs and evidence must remain distinguishable.
 
 ## Holistic operating model
