@@ -1,18 +1,18 @@
 # Level 1 — Minimum viable foundation
 
-**Status:** four draft review documents available; not yet approved.
+**Status:** four draft review documents with fourteen views available; not yet approved.
 
 | Document (draft) | Review views | Existing authoritative inputs |
 |---|---|---|
 | [PRODUCT.md](PRODUCT.md) | P1 — Product Intent Canvas | [product](../../../product.md) |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context; Q1 — Quality; T1 — Technology; B1 — Cost; A1 — Authority; S1 — Security | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
 | [FACTORY.md](FACTORY.md) | K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; R1 — Convergence & Recovery Map; O1 — Observability & Learning Map | [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
 | [DEFINITION-OF-DONE.md](DEFINITION-OF-DONE.md) | V1 — Definition of Done Matrix | [requirement-verification mapping](../../../requirement-verification-mapping.md), [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
 
 ## Minimum review sequence
 
 1. P1: outcome, users, scope/non-scope, ownership, success criteria.
-2. L1/I1/C1: core versus supporting functions, information domains, system boundaries, cross-axis alignment; quality and responsibility overlays.
+2. L1/I1/C1: core versus supporting functions, information domains, system boundaries, cross-axis alignment; all five overlays Q1/T1/B1/A1/S1; resolve material constraints and distinguish baseline from proposed controls.
 3. K1: authoritative knowledge inventory, precedence, retrieval and unresolved gaps.
 4. E1: PreRun / Run / PostRun for educational execution, inputs/outputs, accountable human gates; distinguish software-development stations M0–M8.
 5. V1: stage-specific and overall completion conditions; applicable requirement/AC/VC/FCC references, method, threshold, evidence, blocking/exception policy and owner. Distinguish verification from acceptance and publication.

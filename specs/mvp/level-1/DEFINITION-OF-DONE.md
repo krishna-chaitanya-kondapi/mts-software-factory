@@ -42,3 +42,18 @@ flowchart LR
 ```
 
 **DoD for the first slice must still be instantiated.** The [mapping](../../../requirement-verification-mapping.md) explicitly records partial capability coverage; this review view does not close those gaps. Agree subject-specific rubric/thresholds, exception authority, gate owners and RunLog requirements before execution. Factory telemetry and usage-log requirements that lack canonical checks need approved requirement deltas. See [completion and evidence accounting](../../../requirement-verification-mapping.md#completion-and-evidence-accounting) and [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence).
+
+## Overlay completion checks — proposed additions for pilot instantiation
+
+These are review check candidates, not newly approved VC IDs. Existing mapped criteria remain authoritative; where no criterion covers a control, obtain an approved requirement/VC delta before representing it as mandatory verified scope.
+
+| Overlay | Candidate condition | Evidence / disposition |
+|---|---|---|
+| Q1 | Applicable quality profile and checks complete; agreed performance/recovery limits met | VC-MTS-004/009 and independent results; new recovery/performance criteria as required |
+| T1 | Approved dependencies and versions recorded; actual invocation traceable | Run manifest and compatibility evidence; proposed delta |
+| B1 | Approved budget and retry ceilings respected; mandatory usage recorded or explicitly blocked | Estimate/actual ledger, attempt events; proposed delta |
+| A1 | All applicable gates signed for exact revisions; stale approvals rejected | VC-MTS-005/006, approval records and invalidation tests |
+| S1 | Source permission and destination valid; no restricted data/credentials in public outputs; approved access and security controls verified | VC-MTS-002/006 for source/release; security checklist/test evidence and new criteria for uncovered controls |
+| O1 | Mandatory RunLog and evidence complete, with actual/unknown measurements distinguished | VC-MTS-008 supports improvement trace; telemetry completeness requires delta |
+
+PreRun: resolve applicability, owners, thresholds and evidence before approval. Run: failed mandatory applicable controls trigger bounded repair or block; security incidents stop affected actions and escalate. PostRun: human release authority does not silently waive unmet criteria; authorized exceptions are separately reported under policy. Missing evidence is not a pass. No new runtime verification was performed in this documentation revision.

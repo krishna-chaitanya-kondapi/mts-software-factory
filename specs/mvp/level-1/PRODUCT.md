@@ -26,3 +26,7 @@ flowchart LR
 The three workflow families are a review grouping, not a replacement for the existing FA IDs. Diagnostic assessments and standalone lessons retain their existing later status pending scope approval; broader analytics remain deferred.
 
 **Authority:** [Product intent and outcomes](../../../product.md), [business architecture](../../../business-architecture.md), [verification mapping](../../../requirement-verification-mapping.md). The quartet remains draft/review; full-product creation sufficiency is not established. See [V1](DEFINITION-OF-DONE.md) for evidence gates.
+
+## Minimum cross-cutting intent
+
+Deliver trustworthy, readable and maintainable educational materials within an agreed time/resource envelope, without compromising source rights, student privacy or human release authority. Preserve model/harness portability where feasible. See [architecture overlays](ARCHITECTURE.md#q1--quality-attribute-matrix) for constraints and [V1](DEFINITION-OF-DONE.md) for evidence. Numerical cost/performance targets and new security controls remain proposed until approved.

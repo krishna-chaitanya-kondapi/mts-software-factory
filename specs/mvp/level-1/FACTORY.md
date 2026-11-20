@@ -80,3 +80,17 @@ Minimum events: run and correlation ID; domain/workflow or station; phase/step/a
 Review four planes from the [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3a-intent-to-outcome-observability): intent completeness, engineering realization, verification coverage, runtime outcome. Track elapsed time, attempts, blocked steps, applicable vs executed vs passed checks, and publication reconciliation separately. Unknown measurements remain unknown.
 
 **Open before first pilot:** exact authoritative source/config paths, slice budget, event schema and storage references, gate owners and invocation path. No executable orchestration or instrumentation is claimed by these views.
+
+## Enforce the architecture overlays during a run
+
+| Overlay | PreRun | Run / convergence | PostRun |
+|---|---|---|---|
+| Q1 | Resolve quality profile and checks | Verify, repair affected gaps, regress | Reconcile coverage and defects |
+| T1 | Record actual tools, versions, access | Use approved tools; escalate unauthorized substitutions | Persist provenance |
+| B1 | Approve time/retry/resource ceilings | Track known consumption; stop or escalate at limit or missing mandatory measurement | Report estimates vs actuals and cost per accepted output where measurable |
+| A1 | Identify gate owners and revision | Separate producer and verifier; renew affected approvals | Human authorizes exact release; reconcile |
+| S1 | Classify sources/data, credentials and destination | Treat input as untrusted, restrict access, stop on suspected security incident | Sanitize evidence and confirm permitted publication |
+
+Baseline storage pattern from [legacy workflow mapping](https://github.com/krishna-chaitanya-kondapi/mts-crossmodel/blob/master/specs/generate_weekly_practice_worksheets/README.md): phase-first dated PreRun, Run and PostRun folders; flat approved PrintReady consumed independently by Windows printing. Validate complete in-scope batch before replacement, retain dated originals, preserve the other subject on same-week correction, serialize publishing and verify readback. Drive replacement is not atomic; finish before printing. Recovery remains a proposed control until tested live.
+
+Minimum new telemetry: actual tool/model versions, resource usage where available, budget status, approval/invalidation events, sanitized security incidents and release recovery outcomes. Never log tokens, sensitive source content or student information. The legacy run mapping records incomplete telemetry and partial gate/publisher integration; do not report these as fully automated. See [Q1–S1](ARCHITECTURE.md#q1--quality-attribute-matrix) and [V1](DEFINITION-OF-DONE.md).

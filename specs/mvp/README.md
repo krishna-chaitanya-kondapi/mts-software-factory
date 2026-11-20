@@ -4,7 +4,7 @@
 
 ## Start here
 
-[Level 1 — foundation](level-1/README.md) is the active review increment. Its nine views are consolidated into four short documents. Review the whole before drilling down.
+[Level 1 — foundation](level-1/README.md) is the active review increment. Its fourteen views are consolidated into four short documents. Review the whole before drilling down.
 
 | Level | Purpose | Status |
 |---|---|---|
@@ -26,6 +26,10 @@ MTS review focus: Weekly Practice, Mock Assessments, Topic Mastery; Curriculum, 
 Each view uses a stable ID, scope (overall or workflow), state (as-is/to-be), status (draft/review/approved/superseded), owner, source references and evidence limits. Prefer one or two pages of plain-language review per document, a diagram only when it helps, and relative links. Use Markdown with embedded Mermaid or companion SVG when layout precision warrants it. Store companions beside their review document with names such as `mts-RVC-L1-BPL-to-be.svg`. Add deeper files only to answer a concrete review question. Preserve existing atomic trace IDs.
 
 For executable schemas, code, tests, run logs and release evidence, link to their actual authoritative locations rather than copying them here. No production credentials, student records or private source materials in this public repository.
+
+## Cross-cutting overlays
+
+Q1 quality, T1 technology, B1 cost, A1 authority and S1 security are Level 1 architecture views, progressively elaborated only where a slice needs them. Keep the four-document model; link constraints to execution, bounded recovery, evidence and DoD. See [architecture](level-1/ARCHITECTURE.md#q1--quality-attribute-matrix).
 
 ## Incremental exit rule
 
