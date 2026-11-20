@@ -1,12 +1,12 @@
 # Reviewability Engineering
 
-**Version 1.0.0 · initial adopted guidance · visual examples draft pending review.** A reusable discipline for making intent, architecture, implementation, execution and verification progressively understandable, inspectable, verifiable and governable by humans.
+**Version 1.1.0 · initial adopted guidance · visual examples draft pending review.** A reusable discipline for making intent, architecture, implementation, execution and verification progressively understandable, inspectable, verifiable and governable by humans.
 
 **Define comprehensively. Apply progressively. Elaborate selectively. Evolve continuously.** The complete review methodology is defined here; MTS need only produce the minimum sufficient views for the next safe decision or demonstrable slice.
 
 ![Review dimensions](visuals/reviewability-dimensions.svg)
 
-Four review levels × fourteen perspectives × three engineering scopes = 168 classification combinations, not 168 required documents.
+Four review levels × fourteen perspectives × three engineering scopes = 168 classification combinations, not 168 required documents. Each applicable Level 1 perspective needs a suitable primitive visualization, with justified exceptions documented; consolidate where useful.
 
 ![Review levels](visuals/reviewability-levels.svg)
 

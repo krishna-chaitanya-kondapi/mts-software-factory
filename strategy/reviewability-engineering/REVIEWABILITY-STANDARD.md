@@ -1,6 +1,6 @@
 # Reviewability Engineering — standard
 
-Version: 1.0.0. Status: initial guidance adopted for use, independent of ratification of the parent factory strategy. Visual examples are draft. Authority: this document governs review method; the [registry](review-patterns.yaml) governs view identifiers and mappings. Source business facts remain in their owning artifacts. The table below is a human-readable projection of the registry.
+Version: 1.1.0. Status: initial guidance adopted for use, independent of ratification of the parent factory strategy. Visual examples are draft. Authority: this document governs review method; the [registry](review-patterns.yaml) governs view identifiers and mappings. Source business facts remain in their owning artifacts. The table below is a human-readable projection of the registry.
 
 ## 1. Purpose and principles
 
@@ -24,6 +24,8 @@ Classify each review by scope (factory/workflow/production-run), perspective (wh
 As-is and to-be apply at every level. No automatic waterfall or maturity implication. C1–C4 retain established C4 meanings; a C4 container is an independently running/deployable application or data store, not necessarily a Docker container. The shared depth mapping is a navigation convention: a logical ERD can be I3 without claiming physical implementation. L and I levels are local conventions inspired by standard modeling practices.
 
 ## 4. Review perspectives and preferred views
+
+Every applicable Level 1 perspective should have a suitable primitive visualization that communicates its essential structure, relationships or boundaries. Tables and explanatory text supplement the visual rather than automatically replacing it. Consolidate views when a shared visual explicitly covers each perspective; explain any justified exception rather than generating decorative graphics. Preserve canonical sources and review them using the visual fidelity contract.
 
 | Perspective | 1 — Conceptual Foundation | 2 — Logical Design | 3 — Implementation Review | 4 — Technical Details |
 |---|---|---|---|---|
@@ -89,7 +91,7 @@ Human approval binds the reviewed revision and SHA-256. Commit exact bytes, fetc
 | RE-06 | Important relationships and boundaries visible |
 | RE-07 | Appropriate abstraction level |
 | RE-08 | As-is/to-be and implementation maturity distinguished |
-| RE-09 | Readability and rendered visual inspection |
+| RE-09 | Readability, rendered visual inspection and applicable Level 1 primitive coverage |
 | RE-10 | Naming and metadata conform |
 | RE-11 | Supplementary explanation adds meaning without duplication |
 | RE-12 | Canonical visual source preserved |

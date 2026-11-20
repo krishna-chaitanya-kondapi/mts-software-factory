@@ -5,7 +5,7 @@ description: Produce or review evidence-backed architecture, intent, workflow, i
 # Reviewability Engineering skill
 
 1. Read the [overview](../../strategy/reviewability-engineering/README.md), [standard](../../strategy/reviewability-engineering/REVIEWABILITY-STANDARD.md) and applicable [registry](../../strategy/reviewability-engineering/review-patterns.yaml). Respect root AGENTS.md, governing strategy and human authority.
-2. Interpret requested scope, subject, perspective, level, state and review question; resolve legacy IDs by context. Select only useful views; link existing authoritative sources. For MTS start at specs/mvp/README.md.
+2. Interpret requested scope, subject, perspective, level, state and review question; resolve legacy IDs by context. For each applicable Level 1 perspective provide a suitable primitive visualization (or documented justified exception); a consolidated graphic may cover multiple explicitly identified perspectives. Select only useful views; link existing authoritative sources. For MTS start at specs/mvp/README.md.
 3. Fetch actual source/evidence. Distinguish observed execution from code presence, planned work, assumptions and missing evidence. Preserve trace IDs, avoid exposing private data.
 4. Use registry pattern and detailed contract where available. Author canonical SVG before rendering, derive review preview from identical file; Markdown explains decisions and limitations. Follow naming and metadata rules. Never silently recreate a reviewed diagram in Mermaid.
 5. Check RE-01–RE-15 and pattern criteria; repair and recheck. Record unknowns, exceptions and pending visual inspection. Persist drafts only as drafts; seek approval of exact revision when required.

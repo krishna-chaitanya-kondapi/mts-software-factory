@@ -1,5 +1,5 @@
 discipline: reviewability-engineering
-version: 1.0.0
+version: 1.1.0
 levels:
   1: "Conceptual Foundation"
   2: "Logical Design"
@@ -137,3 +137,5 @@ states: [as-is, to-be]
 statuses: [draft, review, approved, superseded]
 preferred_static_visual: svg
 supplementary_text: markdown
+
+level_1_primitive_visual_policy: required_for_applicable_perspectives_with_documented_exceptions

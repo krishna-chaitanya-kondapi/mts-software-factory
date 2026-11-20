@@ -1,11 +1,11 @@
 # Level 1 — Conceptual Foundation
 
-**Status:** P1 Product review view approved; Architecture, Definition of Done and Factory remain draft. Overall Level 1 approval pending.
+**Status:** P1 Product and Architecture review views approved; Definition of Done and Factory remain draft. Overall Level 1 approval pending.
 
 | Document | Review views | Existing authoritative inputs |
 |---|---|---|
 | [PRODUCT.md](PRODUCT.md) | P1 — Product Intent Canvas (approved review view) | [product](../../../product.md) |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context; Q1 — Quality; T1 — Technology; B1 — Cost; A1 — Authority; S1 — Security | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Approved review view: L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context; Q1 — Quality; T1 — Technology; B1 — Cost; R1 — Responsibility (legacy A1); S1 — Security | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
 | [FACTORY.md](FACTORY.md) | K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; R1 — Convergence & Recovery Map; O1 — Observability & Learning Map | [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
 | [DEFINITION-OF-DONE.md](DEFINITION-OF-DONE.md) | V1 — Definition of Done Matrix | [requirement-verification mapping](../../../requirement-verification-mapping.md), [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
 

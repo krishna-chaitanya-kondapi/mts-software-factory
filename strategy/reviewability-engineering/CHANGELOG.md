@@ -1,5 +1,11 @@
 # Evolution history
 
+## 1.1.0 — 2026-11-20
+
+- Human approved Level 1 primitive visualization principle across all applicable perspectives (including overlays); tables supplement rather than replace visual understanding by default.
+- Extend RE-09, registry and skill to check primitive coverage; preserve all prior IDs and mappings.
+- First approved architecture application: explicit composition, presentation, rendering and rendered deliverable QA across all axes and overlays. Historical reviewed source bytes preserved.
+
 ## 1.0.0 — 2026-11-20
 
 - Consolidate prior ARF/RVC guidance into Reviewability Engineering; adopt Conceptual Foundation as Level 1.
