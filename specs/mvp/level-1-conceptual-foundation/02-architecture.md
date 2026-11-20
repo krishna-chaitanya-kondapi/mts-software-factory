@@ -1,17 +1,19 @@
 # Level 1 — Architecture axes and overlays
+
+[Previous: 01-product](01-product.md) · [Level 1 index](README.md) · [Next: 03-definition-of-done](03-definition-of-done.md) · 2 of 4
 **ID:** RVC-ARCH-MTS-L1 · **State:** To-be conceptual review with known operating context · **Status:** Approved conceptual review view · **Revision:** 2 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** MTS architecture owner (role)
 
 ## Holistic overview
 
-Three axes explain what MTS does, what information it manages and which systems participate. Five overlays constrain all three. Use the current implementation as the starting point, not as proof that every target control works. The minimum controls below guide [execution](FACTORY.md) and [completion](DEFINITION-OF-DONE.md).
+Three axes explain what MTS does, what information it manages and which systems participate. Five overlays constrain all three. Use the current implementation as the starting point, not as proof that every target control works. The minimum controls below guide [execution](04-factory.md) and [completion](03-definition-of-done.md).
 
-![Architecture kernel and overlays](factory-mts-L1-I1-C1-architecture-overview-to-be.svg)
+![Architecture kernel and overlays](diagrams/02-architecture/factory-mts-L1-I1-C1-architecture-overview-to-be.svg)
 
 **Baseline:** [legacy weekly implementation mapping](https://github.com/krishna-chaitanya-kondapi/mts-crossmodel/blob/master/specs/generate_weekly_practice_worksheets/README.md), derived from the November 16, 2026 Math/ELA retrospective, and inspected legacy gate/publisher/printer code. The current repository contains an [MCQ validator](../../../src/mts_factory/assessment/mcq_quality.py), [schema](../../../contracts/assessment/mcq-question-bank.schema.json) and [tests](../../../tests/test_mcq_quality.py); presence is not execution evidence. Baseline labels: **Observed** = recorded in prior workflow mapping; **Repo** = code exists; **Partial** = integration or coverage incomplete; **Proposed** = new target. No fresh production run or security audit was conducted.
 
 ## L1 — Business Process Landscape (RVC-L1-BPL)
 
-![Business Process Landscape](factory-mts-L1-BPL-to-be.svg)
+![Business Process Landscape](diagrams/02-architecture/factory-mts-L1-BPL-to-be.svg)
 
 Source Management covers discovery, access/qualification, arrangement, cataloging, selection and usage tracking. It supports all workflows without dominating the landscape.
 
@@ -27,7 +29,7 @@ See [canonical capability and process catalog](../../../business-architecture.md
 
 ### Educational artifact production — FA-04-MAT
 
-![Educational artifact production capability](factory-mts-L1-artifact-production-capability-to-be.svg)
+![Educational artifact production capability](diagrams/02-architecture/factory-mts-L1-artifact-production-capability-to-be.svg)
 
 | Capability | Responsibility |
 |---|---|
@@ -42,13 +44,13 @@ FA-04-MAT owns educational composition, presentation and rendering; FA-05-QLT in
 
 ## I1 — Domain Concept Map (RVC-I1-DCM)
 
-![Domain Concept Map](factory-mts-I1-DCM-to-be.svg)
+![Domain Concept Map](diagrams/02-architecture/factory-mts-I1-DCM-to-be.svg)
 
 These are conceptual groups, not inheritance or cardinality. Presentation concepts explicitly include approved profiles, templates, layouts, figures and artifact revisions; their detailed semantics and relationships belong to I2/I3, not new entity IDs in this view. Use the [ontology entity catalog](../../../ontology.md#entity-catalog) for canonical definitions. Source catalog and usage-log concepts are review proposals where not yet mapped; resolve semantic deltas there rather than mint competing IDs.
 
 ## C1 — System Context (RVC-C1-SCD)
 
-![System Context](factory-mts-C1-system-context-to-be.svg)
+![System Context](diagrams/02-architecture/factory-mts-C1-system-context-to-be.svg)
 
 MTS explicitly includes composition, presentation and rendering as product responsibilities. Renderer/service decomposition belongs to C2/C3. MTS is the logical product boundary; ChatGPT is the observed hosting/harness environment for earlier educational runs, not proof that this new repository is deployed. Google Workspace includes Drive, Sheets and Docs. No script-level invocation is asserted here. Verify actual usage per slice against release evidence.
 
@@ -66,7 +68,7 @@ All five overlays below apply to these axes. Resolve detailed boundaries at C2 o
 
 ## Q1 — Quality Attribute Matrix
 
-![Quality attribute map](factory-mts-Q1-quality-attribute-map-to-be.svg)
+![Quality attribute map](diagrams/02-architecture/factory-mts-Q1-quality-attribute-map-to-be.svg)
 
 | Quality goal | Minimum expectation / review method | Baseline |
 |---|---|---|
@@ -78,11 +80,11 @@ All five overlays below apply to these axes. Resolve detailed boundaries at C2 o
 | Maintainability and portability | Separate subject workflows, portable specs; regression and cross-harness tests | Repo assets exist; cross-harness equivalence unverified |
 | Auditability | Revision-bound decisions and traceable evidence, no silent gaps | Partial: prior release records and reconstructed logs; completeness pending |
 
-Numerical targets beyond existing approved criteria are TBD with the owner before a pilot. See [V1](DEFINITION-OF-DONE.md).
+Numerical targets beyond existing approved criteria are TBD with the owner before a pilot. See [V1](03-definition-of-done.md).
 
 ## T1 — Technology Landscape
 
-![Technology landscape](factory-mts-T1-technology-landscape-to-be.svg)
+![Technology landscape](diagrams/02-architecture/factory-mts-T1-technology-landscape-to-be.svg)
 
 | Layer | Current baseline | Boundary / next decision |
 |---|---|---|
@@ -96,7 +98,7 @@ References: [legacy component mapping](https://github.com/krishna-chaitanya-kond
 
 ## B1 — Cost & Resource Model
 
-![Cost and resource drivers](factory-mts-B1-cost-driver-map-to-be.svg)
+![Cost and resource drivers](diagrams/02-architecture/factory-mts-B1-cost-driver-map-to-be.svg)
 
 | Driver | Capture per run |
 |---|---|
@@ -112,7 +114,7 @@ Baseline: complete actual runtime and cost were not available for the previous w
 
 Legacy MVP identifier: A1 (Authority); preserve historical references.
 
-![Responsibility and decision rights](factory-mts-R1-decision-rights-map-to-be.svg)
+![Responsibility and decision rights](diagrams/02-architecture/factory-mts-R1-decision-rights-map-to-be.svg)
 
 Human decides; AI reasons; harness coordinates; code executes and verifies; storage preserves. These are logical responsibilities, not necessarily separate runtimes. AI may make presentation decisions within approved profiles; tools compose and render; independent review inspects the result.
 
@@ -130,7 +132,7 @@ Baseline: human chat approvals and independent Math checks observed; [legacy gat
 
 ## S1 — Trust Boundary & Security Map
 
-![Security and trust boundaries](factory-mts-S1-trust-boundary-map-to-be.svg)
+![Security and trust boundaries](diagrams/02-architecture/factory-mts-S1-trust-boundary-map-to-be.svg)
 
 | Concern | Minimum proposed control / current gap |
 |---|---|
@@ -175,15 +177,19 @@ All sources were read from prior approved revision; document baseline: c060938ea
 
 | Canonical companion | SHA-256 | Git blob |
 |---|---|---|
-| [B1-cost-driver-map](factory-mts-B1-cost-driver-map-to-be.svg) | `94c8e1d2e2266fa72fd209dd4b45bb6979909fea23a99d32840e9dc679874703` | `a07b010c7aeda818f9d8823a7aa403458376de6f` |
-| [C1-system-context](factory-mts-C1-system-context-to-be.svg) | `5af5a9ee404503e272ed1a7d71036618bdd63295778fed398efb635aab9960fb` | `07904b71ff5d124976faa4329e74e96c937ed0f4` |
-| [I1-DCM](factory-mts-I1-DCM-to-be.svg) | `37fc20ede8ae81b2bfd860cf5fb201c48c1d1ab4cfd056a6683992323e327ae2` | `50257c5179f37ed8cb3827b30b3256e0fe0d4255` |
-| [L1-BPL](factory-mts-L1-BPL-to-be.svg) | `50177bebb0c51e5020802478a87f4811969f8b64fd7499c130d91d9a8001d2bf` | `6e508eeaa0123efcf2de970dbede4da69436468e` |
-| [L1-artifact-production-capability](factory-mts-L1-artifact-production-capability-to-be.svg) | `0872e910581930fec3e2506b2702ebd717613f894d27b6c1d991282e85aee2a0` | `44b49f7280ce80acab02febd88cc453797715f8e` |
-| [Q1-quality-attribute-map](factory-mts-Q1-quality-attribute-map-to-be.svg) | `9d204a117f0abb4c332ba4bfce71f07286a4f8abd125f09f0b5d2212ebd1afda` | `1d1363a59abbdab2a4d5f2d2d4bbc6010399608c` |
-| [R1-decision-rights-map](factory-mts-R1-decision-rights-map-to-be.svg) | `fe01022c1608ac7617d0d329ad7d66545482376ae2c6d36d48b0da264352000d` | `2e62188baa3cdd00022fe287cde30fb746142a22` |
-| [S1-trust-boundary-map](factory-mts-S1-trust-boundary-map-to-be.svg) | `36ee8898d46f3d333738f035e40380f6b609b6fd4a0e1fa8a03b1a6b46ae39bd` | `ec0a43fa9746c6922628ada3060e88d5d786d11b` |
-| [T1-technology-landscape](factory-mts-T1-technology-landscape-to-be.svg) | `be5df98941ec25c8a5cf3fba0c793f00ba991eb4d2b267525d7e636070864c2f` | `7e3ba3a4e0f788a8f9a3aa87b5ddc6ebfc783152` |
-| [L1-I1-C1-architecture-overview](factory-mts-L1-I1-C1-architecture-overview-to-be.svg) | `a3b8e40b3eac63208f0d86f4ec8bd3cf1861edc6c25812391527522774eca1c2` | `057de098affc8c4b34d906148a21aee0041390be` |
+| [B1-cost-driver-map](diagrams/02-architecture/factory-mts-B1-cost-driver-map-to-be.svg) | `94c8e1d2e2266fa72fd209dd4b45bb6979909fea23a99d32840e9dc679874703` | `a07b010c7aeda818f9d8823a7aa403458376de6f` |
+| [C1-system-context](diagrams/02-architecture/factory-mts-C1-system-context-to-be.svg) | `5af5a9ee404503e272ed1a7d71036618bdd63295778fed398efb635aab9960fb` | `07904b71ff5d124976faa4329e74e96c937ed0f4` |
+| [I1-DCM](diagrams/02-architecture/factory-mts-I1-DCM-to-be.svg) | `37fc20ede8ae81b2bfd860cf5fb201c48c1d1ab4cfd056a6683992323e327ae2` | `50257c5179f37ed8cb3827b30b3256e0fe0d4255` |
+| [L1-BPL](diagrams/02-architecture/factory-mts-L1-BPL-to-be.svg) | `50177bebb0c51e5020802478a87f4811969f8b64fd7499c130d91d9a8001d2bf` | `6e508eeaa0123efcf2de970dbede4da69436468e` |
+| [L1-artifact-production-capability](diagrams/02-architecture/factory-mts-L1-artifact-production-capability-to-be.svg) | `0872e910581930fec3e2506b2702ebd717613f894d27b6c1d991282e85aee2a0` | `44b49f7280ce80acab02febd88cc453797715f8e` |
+| [Q1-quality-attribute-map](diagrams/02-architecture/factory-mts-Q1-quality-attribute-map-to-be.svg) | `9d204a117f0abb4c332ba4bfce71f07286a4f8abd125f09f0b5d2212ebd1afda` | `1d1363a59abbdab2a4d5f2d2d4bbc6010399608c` |
+| [R1-decision-rights-map](diagrams/02-architecture/factory-mts-R1-decision-rights-map-to-be.svg) | `fe01022c1608ac7617d0d329ad7d66545482376ae2c6d36d48b0da264352000d` | `2e62188baa3cdd00022fe287cde30fb746142a22` |
+| [S1-trust-boundary-map](diagrams/02-architecture/factory-mts-S1-trust-boundary-map-to-be.svg) | `36ee8898d46f3d333738f035e40380f6b609b6fd4a0e1fa8a03b1a6b46ae39bd` | `ec0a43fa9746c6922628ada3060e88d5d786d11b` |
+| [T1-technology-landscape](diagrams/02-architecture/factory-mts-T1-technology-landscape-to-be.svg) | `be5df98941ec25c8a5cf3fba0c793f00ba991eb4d2b267525d7e636070864c2f` | `7e3ba3a4e0f788a8f9a3aa87b5ddc6ebfc783152` |
+| [L1-I1-C1-architecture-overview](diagrams/02-architecture/factory-mts-L1-I1-C1-architecture-overview-to-be.svg) | `a3b8e40b3eac63208f0d86f4ec8bd3cf1861edc6c25812391527522774eca1c2` | `057de098affc8c4b34d906148a21aee0041390be` |
 
 Visual fidelity is verified by equality with these source Git blob IDs; the human reviewed PNG renderings of these sources. Independent post-commit browser rendering is a separate check; do not infer it from byte identity. The original inline graphics were not exportable byte-for-byte; the actual standalone SVG renderings were explicitly approved. See [RE standard](../../../strategy/reviewability-engineering/REVIEWABILITY-STANDARD.md).
+
+---
+
+[Previous: 01-product](01-product.md) · [Level 1 index](README.md) · [Next: 03-definition-of-done](03-definition-of-done.md)

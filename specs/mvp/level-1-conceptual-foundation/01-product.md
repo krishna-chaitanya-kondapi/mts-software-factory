@@ -1,4 +1,6 @@
 # P1 — Product Intent Canvas
+
+[MVP overview](../README.md) · [Level 1 index](README.md) · [Next: 02-architecture](02-architecture.md) · 1 of 4
 **ID:** RVC-P1-MTS · **Canonical perspective:** P1 · **Scope:** Factory / MTS product · **State:** To-Be · **Status:** Approved review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.0.0 · **Owner:** MTS product owner
 
 ## Product intent
@@ -9,13 +11,13 @@ The product's objective is educational value. The Software Factory enables effic
 
 ## Product landscape
 
-![P1 Product Landscape](factory-mts-P1-product-landscape-to-be.svg)
+![P1 Product Landscape](diagrams/01-product/factory-mts-P1-product-landscape-to-be.svg)
 
 Three educational artifact families are the primary review grouping, not replacements for existing functional-area IDs. Topic Mastery includes detailed topic notes/guides, distinct from deferred standalone lessons.
 
 ## Educational product value stream
 
-![P1 Educational Product Value Stream](factory-mts-P1-value-stream-to-be.svg)
+![P1 Educational Product Value Stream](diagrams/01-product/factory-mts-P1-value-stream-to-be.svg)
 
 Approval and verification are distinct; changes require affected checks to be repeated. Feedback informs governed improvement.
 
@@ -44,7 +46,7 @@ Deliver trustworthy, readable and maintainable materials within agreed resource 
 | OUT-MTS-004 | Release integrity | Correct, matched and approved deliverables |
 | OUT-MTS-005 | Continuous improvement | Feedback and evidence improve subsequent materials |
 
-Numerical targets and detailed criteria belong to [architecture overlays](ARCHITECTURE.md#q1--quality-attribute-matrix) and [V1](DEFINITION-OF-DONE.md). No new numerical targets or security controls are ratified here.
+Numerical targets and detailed criteria belong to [architecture overlays](02-architecture.md#q1--quality-attribute-matrix) and [V1](03-definition-of-done.md). No new numerical targets or security controls are ratified here.
 
 ## Authority and review metadata
 
@@ -58,3 +60,7 @@ Human approval: product content approved in conversation; both canonical revisio
 | factory-mts-P1-value-stream-to-be.svg | f17da4121f56e91b0bc9f9e4654c089fa357129e6316c2d31f3c93fac51f3bf8 |
 
 Review pattern: P1 Product Landscape + conceptual value-stream companion. Evidence limits: conceptual intent review, not runtime verification. Git history records persistence revisions.
+
+---
+
+[MVP overview](../README.md) · [Level 1 index](README.md) · [Next: 02-architecture](02-architecture.md)

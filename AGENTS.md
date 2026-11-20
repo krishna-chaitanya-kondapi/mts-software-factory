@@ -21,6 +21,10 @@ This file is a thin, model-agnostic orientation for human and AI contributors.
 
 For architecture, intent, workflow, implementation and evidence reviews, apply the [Reviewability Engineering standard](strategy/reviewability-engineering/README.md) and [skill](skills/reviewability-engineering/SKILL.md). Use minimum sufficient views and preserve the exact approved canonical visual source; no unrequested diagram recreation. Existing authority, trace IDs and release gates remain intact.
 
+## Review workspace organization
+
+For `specs/mvp/`, follow the [workspace conventions](specs/mvp/README.md): descriptive level folders, numbered primary documents, README reading index, relative navigation and diagram subfolders. Preserve canonical SVG bytes, stable IDs and approval boundaries; validate links after structural refactors.
+
 ## Documentation checkpoint
 
 Before drafting or revising Markdown, apply the strategy's [documentation standard](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#documentation-standard-for-artifact-markdown).

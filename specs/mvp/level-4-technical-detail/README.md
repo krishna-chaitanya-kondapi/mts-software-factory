@@ -9,4 +9,4 @@ Exit: the specific technical question is answered with evidence and linked back 
 ## Cross-cutting overlays
 
 Inspect Q1 thresholds/test internals, T1 dependencies/configuration, B1 optimization, A1 authorization logic and S1 security configuration/tests only for a concrete review need.
-See [Level 1 overlay evolution](../level-1/ARCHITECTURE.md#overlay-evolution--minimum-depth-by-decision). No additional files required by default.
+See [Level 1 overlay evolution](../level-1-conceptual-foundation/02-architecture.md#overlay-evolution--minimum-depth-by-decision). No additional files required by default.

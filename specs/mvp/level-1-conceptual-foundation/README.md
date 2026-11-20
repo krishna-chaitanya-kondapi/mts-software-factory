@@ -4,12 +4,21 @@
 
 | Document | Review views | Existing authoritative inputs |
 |---|---|---|
-| [PRODUCT.md](PRODUCT.md) | P1 — Product Intent Canvas (approved review view) | [product](../../../product.md) |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Approved review view: L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context; Q1 — Quality; T1 — Technology; B1 — Cost; R1 — Responsibility (legacy A1); S1 — Security | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
-| [FACTORY.md](FACTORY.md) | Approved review view: K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; N1 — Convergence & Recovery Map (legacy R1); O1 — Observability & Learning Map | [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
-| [DEFINITION-OF-DONE.md](DEFINITION-OF-DONE.md) | V1 — Definition of Done Matrix (approved review view) | [requirement-verification mapping](../../../requirement-verification-mapping.md), [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
+| [01-product.md](01-product.md) | P1 — Product Intent Canvas (approved review view) | [product](../../../product.md) |
+| [02-architecture.md](02-architecture.md) | Approved review view: L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context; Q1 — Quality; T1 — Technology; B1 — Cost; R1 — Responsibility (legacy A1); S1 — Security | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
+| [03-definition-of-done.md](03-definition-of-done.md) | V1 — Definition of Done Matrix (approved review view) | [requirement-verification mapping](../../../requirement-verification-mapping.md), [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
+| [04-factory.md](04-factory.md) | Approved review view: K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; N1 — Convergence & Recovery Map (legacy R1); O1 — Observability & Learning Map | [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
 
 Existing A1 (Authority) and R1 (Convergence & Recovery) are legacy MVP IDs; canonical mappings are Responsibility R1 and Convergence N1 respectively. Preserve existing IDs and use qualified namespaces in new views. See the [reviewability standard](../../../strategy/reviewability-engineering/REVIEWABILITY-STANDARD.md).
+
+## Document reading sequence
+
+1. [Product](01-product.md) — desired outcomes and scope.
+2. [Architecture](02-architecture.md) — solution structure and constraints.
+3. [Definition of Done](03-definition-of-done.md) — verification and completion contracts.
+4. [Factory](04-factory.md) — knowledge, execution, convergence and learning.
+
+The following detailed review checkpoints retain their established dependency order; they are not the document reading order.
 
 ## Minimum review sequence
 
@@ -26,3 +35,9 @@ The minimum documents may link to existing detailed artifacts instead of repeati
 ## First actionable slice
 
 Use a bounded representative workflow (candidate: weekly worksheet generation), verify its inputs and existing implementation, resolve its applicable DoD, and prove generation, verification, repair and publication evidence. Selection and scope require human confirmation. Keep source management visible as a supporting function, not the central value stream.
+
+## Supporting assets
+
+Canonical SVGs are grouped under `diagrams/` by owning document, with original filenames and bytes preserved. They remain embedded in the documents.
+
+[Diagram folders](diagrams/) · [MVP overview](../README.md) · [Next: Level 2](../level-2-logical-detail-and-structured-contracts/README.md)

@@ -1,4 +1,6 @@
 # V1 — Definition of Done Matrix
+
+[Previous: 02-architecture](02-architecture.md) · [Level 1 index](README.md) · [Next: 04-factory](04-factory.md) · 3 of 4
 **ID:** RVC-V1-MTS · **State:** To-be review contract · **Status:** Approved conceptual review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** product/quality owner (roles)
 
 Completion is evidence against the approved scope, not confidence in generated content. The actual run uses a revision-bound completion contract (FCC) selecting applicable criteria, thresholds, rubrics, regression scope, budgets, evidence and human gates.
@@ -7,23 +9,23 @@ Completion is evidence against the approved scope, not confidence in generated c
 
 **Definition of Done = applicable requirements + verification layers + criteria and rubrics + completion and acceptance rules.** Establish the contract before execution; independent evidence measures the actual state against it. Repair only within the authorized scope and budget, otherwise block/escalate.
 
-![Definition of Done map](factory-mts-V1-definition-of-done-map-to-be.svg)
+![Definition of Done map](diagrams/03-definition-of-done/factory-mts-V1-definition-of-done-map-to-be.svg)
 
 ## Seven verification layers
 
-![Seven verification layers](factory-mts-V1-verification-layers-to-be.svg)
+![Seven verification layers](diagrams/03-definition-of-done/factory-mts-V1-verification-layers-to-be.svg)
 
 These are conceptual responsibilities, not seven independent teams or sequential gates. Composition/presentation is distinct from actual rendered-deliverable inspection. Revision evidence and overlay controls apply across layers.
 
 ## Completion scopes
 
-![Completion scopes](factory-mts-V1-completion-scopes-to-be.svg)
+![Completion scopes](diagrams/03-definition-of-done/factory-mts-V1-completion-scopes-to-be.svg)
 
 Factory, workflow and production run are the engineering scopes. A deliverable is a subordinate review subject. A passing artifact or run alone cannot establish whole-workflow or whole-factory completion.
 
 ## Verification methods
 
-![Verification methods](factory-mts-V1-verification-methods-to-be.svg)
+![Verification methods](diagrams/03-definition-of-done/factory-mts-V1-verification-methods-to-be.svg)
 
 Select deterministic checks, independent AI evaluations, visual inspection and human judgment as appropriate, before execution. Independently solve Math items; use evidence-based ELA reasoning; inspect actual exported artifacts for both subjects. Combine methods when required; structural checks alone cannot establish semantic correctness.
 
@@ -45,7 +47,7 @@ The nine existing shared controls are referenced below, not redefined. Each link
 
 ## Stage and overall gate
 
-![Production run phase completion contracts](factory-mts-V1-production-run-completion-to-be.svg)
+![Production run phase completion contracts](diagrams/03-definition-of-done/factory-mts-V1-production-run-completion-to-be.svg)
 
 The phase contracts preserve every applicable subject-specific checkpoint, including the five Math checkpoints. Reapprove material scope or intent changes; invalidate affected evidence.
 
@@ -60,11 +62,11 @@ Mandatory failures, unknown applicability or missing evidence block the affected
 
 ## Completion states and evidence accounting
 
-![Completion states](factory-mts-V1-completion-states-to-be.svg)
+![Completion states](diagrams/03-definition-of-done/factory-mts-V1-completion-states-to-be.svg)
 
 Generated, verified, approved and released are distinct. Human authorization does not convert a failed or unverified criterion into a pass. Outcome validation may continue after release.
 
-![Historical November 16 verification evidence example](factory-mts-V1-historical-verification-example-to-be.svg)
+![Historical November 16 verification evidence example](diagrams/03-definition-of-done/factory-mts-V1-historical-verification-example-to-be.svg)
 
 Historical example from the November 16 retrospective, not a fresh assessment: Math 152 passed of 154 applicable checks (5 not applicable excluded); ELA 114 passed of 270 reported checks, 156 not verified. Both reports recorded zero failures, but the differing registries prevent direct comparison of educational quality. Evidence sources: [Math release manifest](https://drive.google.com/file/d/1eodgkzSEyK9XbqZhha0p7koLhQDVhaMR/view), [ELA QA record](https://drive.google.com/file/d/1iOP30qUMEdrAoD-SIH-32trQsaCGhSQJ/view); access and historical metrics have not been independently reverified in this document revision. These numbers are illustrative, not targets.
 
@@ -93,12 +95,16 @@ Human approved V1 content and seven conceptual verification layers, then explici
 
 | Canonical companion | SHA-256 | Git blob |
 |---|---|---|
-| [completion-scopes](factory-mts-V1-completion-scopes-to-be.svg) | `6dfc338e4ecb5b15bf76fa861e6f2c381d70141360a575f15ac1fe9b67a8145d` | `f32b8d0c5070acb8c5b3a698c4629ed7aa13555e` |
-| [completion-states](factory-mts-V1-completion-states-to-be.svg) | `7312f17fcd79ce3974e9261afc43db30b455f98c51a35466378d1e075d1422dc` | `ce5df74146fd250161277dd85c39459434c6ca24` |
-| [definition-of-done-map](factory-mts-V1-definition-of-done-map-to-be.svg) | `cd389e05772dee4c59f8b97b19732985279c86952a4fe9505cfe45326b545f98` | `97598edfd5fe6d25b497006517d6126e5cb4fddd` |
-| [historical-verification-example](factory-mts-V1-historical-verification-example-to-be.svg) | `cfa59188aaf8272133d11058ecdb1dbc5e81e25567d633d9417bae9c3f78c870` | `278e9691b43c4ee20e16e14edccbde9dec900351` |
-| [production-run-completion](factory-mts-V1-production-run-completion-to-be.svg) | `954ef5ea8029072ae5bff35144ea951b262ec0a09446a3b51f4ef8dffdaca6e4` | `1d7a52a48b2d739e9e2f874ffc10c6e9a83639a0` |
-| [verification-layers](factory-mts-V1-verification-layers-to-be.svg) | `2fc9529826eae0a988e1c922320fd61f7c53cc16136982a72a1946857b9777af` | `ad170bf0109115737e321f76976088e75490fe55` |
-| [verification-methods](factory-mts-V1-verification-methods-to-be.svg) | `f1ddcc48389f47c74a772da2f6bda20723bee1a33ce92a7a270a688e052b24e0` | `b9fe2a5962933cffe4477fa48d66469bd4d865cb` |
+| [completion-scopes](diagrams/03-definition-of-done/factory-mts-V1-completion-scopes-to-be.svg) | `6dfc338e4ecb5b15bf76fa861e6f2c381d70141360a575f15ac1fe9b67a8145d` | `f32b8d0c5070acb8c5b3a698c4629ed7aa13555e` |
+| [completion-states](diagrams/03-definition-of-done/factory-mts-V1-completion-states-to-be.svg) | `7312f17fcd79ce3974e9261afc43db30b455f98c51a35466378d1e075d1422dc` | `ce5df74146fd250161277dd85c39459434c6ca24` |
+| [definition-of-done-map](diagrams/03-definition-of-done/factory-mts-V1-definition-of-done-map-to-be.svg) | `cd389e05772dee4c59f8b97b19732985279c86952a4fe9505cfe45326b545f98` | `97598edfd5fe6d25b497006517d6126e5cb4fddd` |
+| [historical-verification-example](diagrams/03-definition-of-done/factory-mts-V1-historical-verification-example-to-be.svg) | `cfa59188aaf8272133d11058ecdb1dbc5e81e25567d633d9417bae9c3f78c870` | `278e9691b43c4ee20e16e14edccbde9dec900351` |
+| [production-run-completion](diagrams/03-definition-of-done/factory-mts-V1-production-run-completion-to-be.svg) | `954ef5ea8029072ae5bff35144ea951b262ec0a09446a3b51f4ef8dffdaca6e4` | `1d7a52a48b2d739e9e2f874ffc10c6e9a83639a0` |
+| [verification-layers](diagrams/03-definition-of-done/factory-mts-V1-verification-layers-to-be.svg) | `2fc9529826eae0a988e1c922320fd61f7c53cc16136982a72a1946857b9777af` | `ad170bf0109115737e321f76976088e75490fe55` |
+| [verification-methods](diagrams/03-definition-of-done/factory-mts-V1-verification-methods-to-be.svg) | `f1ddcc48389f47c74a772da2f6bda20723bee1a33ce92a7a270a688e052b24e0` | `b9fe2a5962933cffe4477fa48d66469bd4d865cb` |
 
 Canonical source byte identity is checked by matching approved local Git blob IDs before and after commit. Human reviewed previews rendered from these sources. Independent post-commit browser rendering is separate and not established by byte identity. Historical metrics are reported evidence only. No new requirements or numeric thresholds were authorized by this review.
+
+---
+
+[Previous: 02-architecture](02-architecture.md) · [Level 1 index](README.md) · [Next: 04-factory](04-factory.md)
