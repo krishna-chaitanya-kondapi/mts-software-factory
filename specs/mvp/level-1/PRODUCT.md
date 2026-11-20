@@ -1,32 +1,60 @@
 # P1 — Product Intent Canvas
-**ID:** RVC-P1-MTS · **State:** To-be review scope · **Status:** Draft · **Owner:** MTS product owner
+**ID:** RVC-P1-MTS · **Canonical perspective:** P1 · **Scope:** Factory / MTS product · **State:** To-Be · **Status:** Approved review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.0.0 · **Owner:** MTS product owner
 
-MTS helps educators turn learning goals into trustworthy Math and ELA materials. The reusable software factory builds and improves the product; the educational execution workflows produce materials. They are not interchangeable.
+## Product intent
 
-```mermaid
-flowchart LR
-  A[Learning goals] --> B[Weekly practice / Mock assessments / Topic mastery]
-  B --> C[Independent verification]
-  C --> D{Human release approval}
-  D -->|Approve| E[Student and teacher materials]
-  D -->|Revise| B
-  E --> F[Coverage and feedback]
-  F -.-> A
-```
+**MTS Learning, Practice & Assessment** helps educators turn approved learning goals into trustworthy Math and ELA educational materials, supporting effective learning, practice, revision and assessment.
 
-| Review dimension | Minimum intent |
+The product's objective is educational value. The Software Factory enables efficient creation, verification, delivery and continuous improvement. Product workflows and the factory that builds and improves them are distinct.
+
+## Product landscape
+
+![P1 Product Landscape](factory-mts-P1-product-landscape-to-be.svg)
+
+Three educational artifact families are the primary review grouping, not replacements for existing functional-area IDs. Topic Mastery includes detailed topic notes/guides, distinct from deferred standalone lessons.
+
+## Educational product value stream
+
+![P1 Educational Product Value Stream](factory-mts-P1-value-stream-to-be.svg)
+
+Approval and verification are distinct; changes require affected checks to be repeated. Feedback informs governed improvement.
+
+## Scope and boundaries
+
+| Aspect | Current review scope |
 |---|---|
-| Users | Educators, subject reviewers, release operators, learners |
-| Core focus | Weekly worksheets and keys; mock assessments and scoring support; topic cheatsheets, practice and guides |
-| Supporting | Curriculum, source and artifact management |
-| Outcome | Correct, suitable, traceable and approved materials |
-| Boundaries | Math and ELA; no unapproved scope, source transformation or publication |
-| Evidence | Approved scope, independent review, source fidelity, exact release reconciliation and learning record |
+| Primary users | Teachers and curriculum owners |
+| Beneficiaries | Students and families |
+| Other stakeholders | Subject reviewers and release operators |
+| Subjects | Math and ELA |
+| Core artifact families | Weekly Practice, Mock Assessments, Topic Mastery |
+| Supporting capabilities | Curriculum, sources, production, verification, release/delivery and improvement |
+| Deferred | Standalone lessons, diagnostics as a separate capability, broader learner analytics, additional subjects |
+| Final release authority | Human |
 
-The three workflow families are a review grouping, not a replacement for the existing FA IDs. Diagnostic assessments and standalone lessons retain their existing later status pending scope approval; broader analytics remain deferred.
+Deliver trustworthy, readable and maintainable materials within agreed resource limits, respecting source permissions, student privacy and human release authority. Preserve model/harness portability where feasible.
 
-**Authority:** [Product intent and outcomes](../../../product.md), [business architecture](../../../business-architecture.md), [verification mapping](../../../requirement-verification-mapping.md). The quartet remains draft/review; full-product creation sufficiency is not established. See [V1](DEFINITION-OF-DONE.md) for evidence gates.
+## Intended product outcomes
 
-## Minimum cross-cutting intent
+| ID | Outcome | Success means |
+|---|---|---|
+| OUT-MTS-001 | Scope fidelity | Deliver what the educator requested |
+| OUT-MTS-002 | Educational correctness | Independently reviewed content and answers |
+| OUT-MTS-003 | Source integrity | Appropriate source selection, permissions and fidelity |
+| OUT-MTS-004 | Release integrity | Correct, matched and approved deliverables |
+| OUT-MTS-005 | Continuous improvement | Feedback and evidence improve subsequent materials |
 
-Deliver trustworthy, readable and maintainable educational materials within an agreed time/resource envelope, without compromising source rights, student privacy or human release authority. Preserve model/harness portability where feasible. See [architecture overlays](ARCHITECTURE.md#q1--quality-attribute-matrix) for constraints and [V1](DEFINITION-OF-DONE.md) for evidence. Numerical cost/performance targets and new security controls remain proposed until approved.
+Numerical targets and detailed criteria belong to [architecture overlays](ARCHITECTURE.md#q1--quality-attribute-matrix) and [V1](DEFINITION-OF-DONE.md). No new numerical targets or security controls are ratified here.
+
+## Authority and review metadata
+
+Source references: [product intent](../../../product.md), [business architecture](../../../business-architecture.md), [verification mapping](../../../requirement-verification-mapping.md), reviewed against repository revision 5a97d62ccc7e2e2e2f4b5fa2fd36932911e995bb. Underlying quartet remains draft/review; this approval is for the P1 review view, not full product ratification, implementation or release.
+
+Human approval: product content approved in conversation; both canonical revision-1 visuals explicitly approved for check-in in conversation on 2026-11-20. Canonical visuals are faithful transcriptions of earlier inline diagrams, subsequently rendered from their standalone sources and approved by the human.
+
+| Canonical SVG | SHA-256 of approved source |
+|---|---|
+| factory-mts-P1-product-landscape-to-be.svg | dee7921df5ddc8d3d99fd9e7cf5b56804f7ec5ab221ff84062956161a9a31a6a |
+| factory-mts-P1-value-stream-to-be.svg | f17da4121f56e91b0bc9f9e4654c089fa357129e6316c2d31f3c93fac51f3bf8 |
+
+Review pattern: P1 Product Landscape + conceptual value-stream companion. Evidence limits: conceptual intent review, not runtime verification. Git history records persistence revisions.
