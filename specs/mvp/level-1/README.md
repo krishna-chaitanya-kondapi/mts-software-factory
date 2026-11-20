@@ -1,13 +1,13 @@
 # Level 1 — Minimum viable foundation
 
-**Status:** scaffold; all four review documents are planned, not yet populated or approved.
+**Status:** four draft review documents available; not yet approved.
 
-| Document (planned) | Review views | Existing authoritative inputs |
+| Document (draft) | Review views | Existing authoritative inputs |
 |---|---|---|
-| PRODUCT.md | P1 — Product Intent Canvas | [product](../../product.md) |
-| ARCHITECTURE.md | L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context | [business architecture](../../business-architecture.md), [ontology](../../ontology.md), [strategy](../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
-| FACTORY.md | K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; R1 — Convergence & Recovery Map; O1 — Observability & Learning Map | [strategy](../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
-| DEFINITION-OF-DONE.md | V1 — Definition of Done Matrix | [requirement-verification mapping](../../requirement-verification-mapping.md), [strategy verification design](../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
+| [PRODUCT.md](PRODUCT.md) | P1 — Product Intent Canvas | [product](../../../product.md) |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
+| [FACTORY.md](FACTORY.md) | K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; R1 — Convergence & Recovery Map; O1 — Observability & Learning Map | [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
+| [DEFINITION-OF-DONE.md](DEFINITION-OF-DONE.md) | V1 — Definition of Done Matrix | [requirement-verification mapping](../../../requirement-verification-mapping.md), [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
 
 ## Minimum review sequence
 

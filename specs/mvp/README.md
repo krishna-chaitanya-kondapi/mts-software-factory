@@ -8,7 +8,7 @@
 
 | Level | Purpose | Status |
 |---|---|---|
-| [1](level-1/README.md) | Establish minimum viable intent, architecture and operating contracts | Scaffolded; content pending |
+| [1](level-1/README.md) | Establish minimum viable intent, architecture and operating contracts | Draft views available |
 | [2](level-2/README.md) | Resolve semantics, logical flows and structured contracts where needed | Deferred |
 | [3](level-3/README.md) | Review implementation components and executable controls for selected slices | Deferred |
 | [4](level-4/README.md) | Inspect technical internals and physical representations when justified | Deferred |
@@ -17,7 +17,7 @@ These are **review-depth folders**, not implementation maturity, M0–M8 station
 
 ## Authority and scope
 
-Consult the [governing strategy](../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md), [intent quartet](../README.md#sources-and-authority), and [agent instructions](../AGENTS.md). The existing quartet remains the source for product scope, business semantics and requirements/verification mappings; its draft status is preserved. MVP documents are concise review lenses with links to those sources, not parallel authorities. If a review reveals a missing or conflicting fact, record it as a proposed delta and resolve it with the owner in the authoritative artifact. Do not silently ratify, rename IDs or migrate code.
+Consult the [governing strategy](../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md), [intent quartet](../../README.md#sources-and-authority), and [agent instructions](../../AGENTS.md). The existing quartet remains the source for product scope, business semantics and requirements/verification mappings; its draft status is preserved. MVP documents are concise review lenses with links to those sources, not parallel authorities. If a review reveals a missing or conflicting fact, record it as a proposed delta and resolve it with the owner in the authoritative artifact. Do not silently ratify, rename IDs or migrate code.
 
 MTS review focus: Weekly Practice, Mock Assessments, Topic Mastery; Curriculum, Source and Artifact Management are supporting areas. This focus neither replaces the existing functional-area IDs nor promotes deferred diagnostics or other scope without approval. The software factory that builds software and the educational workflows that run within the product have distinct lifecycles; connect them explicitly.
 
