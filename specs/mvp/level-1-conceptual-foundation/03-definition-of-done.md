@@ -1,11 +1,35 @@
 # V1 — Definition of Done Matrix
 
 [Previous: 02-architecture](02-architecture.md) · [Level 1 index](README.md) · [Next: 04-factory](04-factory.md) · 3 of 4
-**ID:** RVC-V1-MTS · **State:** To-be review contract · **Status:** Approved conceptual review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** product/quality owner (roles)
+**ID:** RVC-V1-MTS · **State:** To-be review contract · **Status:** Candidate for review (not approved) · **Revision:** 2 candidate · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** product/quality owner (roles)
 
-Completion is evidence against the approved scope, not confidence in generated content. The actual run uses a revision-bound completion contract (FCC) selecting applicable criteria, thresholds, rubrics, regression scope, budgets, evidence and human gates.
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. The prior approved revision remains the baseline; historical approvals below are preserved as provenance. [Baseline and checks](REVIEW-REPORT.md).
+
+## Reading guide
+- [Holistic Definition of Done](#holistic-definition-of-done)
+- [Seven verification layers](#seven-verification-layers)
+- [Completion scopes](#completion-scopes)
+- [Verification methods](#verification-methods)
+- [Minimum completion review](#minimum-completion-review)
+- [Stage and overall gate](#stage-and-overall-gate)
+- [Completion states and evidence accounting](#completion-states-and-evidence-accounting)
+- [Overlay completion checks — proposed additions for pilot instantiation](#overlay-completion-checks--proposed-additions-for-pilot-instantiation)
+- [Review approval and fidelity](#review-approval-and-fidelity)
 
 ## Holistic Definition of Done
+A generated artifact is not necessarily correct, and a correct artifact is not necessarily authorized for release. Define the acceptable state before execution; select checks and rubrics, collect evidence against the exact revision, correct failures within authority and obtain human acceptance where required. The diagrams and existing criteria below describe the conceptual contract, not proof of a successful current run.
+
+| Concept | Distinction | Illustrative MTS example |
+|---|---|---|
+| Requirement | What must be true | Student worksheet and key correspond |
+| Verification | Check against specified criteria | Match item IDs and independently solve Math items |
+| Evaluation | Judge suitability using criteria or rubric | Assess ELA distractor and passage quality |
+| Definition of Done | Applicable completion conditions | All blocking requirements and checks satisfied, with required acceptance rules |
+| Acceptance | Authorized decision | Human approves the exact verified revision |
+
+Computing analogy: assertions and tests provide evidence before deployment; they do not confer deployment permission. Physiological analogy: measured vital signs can inform clinical judgment but do not alone establish recovery. Neither analogy replaces the actual completion contract.
+
+The actual run uses a revision-bound completion contract (FCC) selecting applicable criteria, thresholds, rubrics, regression scope, budgets, evidence and human gates.
 
 **Definition of Done = applicable requirements + verification layers + criteria and rubrics + completion and acceptance rules.** Establish the contract before execution; independent evidence measures the actual state against it. Repair only within the authorized scope and budget, otherwise block/escalate.
 

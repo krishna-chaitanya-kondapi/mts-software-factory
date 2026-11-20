@@ -27,6 +27,8 @@ For `specs/mvp/`, follow the [workspace conventions](specs/mvp/README.md): descr
 
 ## Documentation checkpoint
 
+For authorized documentation pilots, load the proposed [Documentation Engineering standard](strategy/documentation-engineering/README.md), [skill](skills/documentation-engineering/SKILL.md) and applicable DE rubric alongside the existing RE guidance. Compose one verification report and correction loop; preserve existing approval gates. Proposed guidance is not mandatory factory-wide until ratified.
+
 Before drafting or revising Markdown, apply the strategy's [documentation standard](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#documentation-standard-for-artifact-markdown).
 
 - Lead with a short, plain-language picture of the whole: purpose, relationships, key decisions, status and gaps. Put necessary detail below it.

@@ -122,3 +122,6 @@ For a new ChatGPT Project, use short project instructions such as:
 - No existing Math or ELA implementation is deprecated, migrated or deleted.
 - A model adapter does not own requirements or override the canonical strategy.
 - The initial educational use cases do not prevent future non-educational applications of the factory.
+
+## Documentation pilot discovery
+For current repository instructions use [AGENTS.md](../../AGENTS.md). The proposed [Documentation Engineering companion](../documentation-engineering/README.md) extends the existing [Reviewability Engineering](../reviewability-engineering/README.md) for authorized pilots only; do not infer adoption or implementation authority.

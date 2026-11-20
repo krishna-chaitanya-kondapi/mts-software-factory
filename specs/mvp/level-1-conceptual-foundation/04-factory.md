@@ -1,11 +1,40 @@
 # Level 1 — Factory operating model
 
 [Previous: 03-definition-of-done](03-definition-of-done.md) · [Level 1 index](README.md) · [Next level](../level-2-logical-detail-and-structured-contracts/README.md) · 4 of 4
-**ID:** RVC-FACTORY-MTS-L1 · **State:** To-be minimum operating model · **Status:** Approved conceptual review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** factory owner (role)
+**ID:** RVC-FACTORY-MTS-L1 · **State:** To-be minimum operating model · **Status:** Candidate for review (not approved) · **Revision:** 2 candidate · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** factory owner (role)
 
-The engineering factory uses M0–M8 to build the product. The educational product uses PreRun / Run / PostRun to generate materials. Both need verifiable completion, correction and observation; their run IDs and evidence must remain distinguishable.
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. The prior approved revision remains the baseline; historical approvals below are preserved as provenance. [Baseline and checks](REVIEW-REPORT.md).
+
+## Reading guide
+- [Holistic operating model](#holistic-operating-model)
+- [K1 — Knowledge & Context Map](#k1--knowledge--context-map)
+- [Policy, Configuration & Guardrails](#policy-configuration--guardrails)
+- [E1 — Harness & Execution Engineering](#e1--harness--execution-engineering)
+- [E1 — Execution Lifecycle Map](#e1--execution-lifecycle-map)
+- [Shared artifact production](#shared-artifact-production)
+- [N1 — Convergence & Recovery Map](#n1--convergence--recovery-map)
+- [O1 — Observability & Learning Map](#o1--observability--learning-map)
+- [Enforce the architecture overlays during a run](#enforce-the-architecture-overlays-during-a-run)
+- [Persistence & delivery](#persistence--delivery)
+- [Engineering discipline alignment](#engineering-discipline-alignment)
+- [As-is baseline versus target](#as-is-baseline-versus-target)
+- [Review approval and source fidelity](#review-approval-and-source-fidelity)
 
 ## Holistic operating model
+Intent defines the desired outcome; knowledge and context make relevant facts and instructions available; the harness enables execution; verification evaluates the result; convergence corrects gaps; observability records what happened and supports learning. Governance constrains all of these. For a weekly worksheet run, resolve the approved inputs, generate and check the worksheet/key, correct failed checks within bounds, and reconcile authorized delivery. This is an illustrative target flow, not evidence of a new run. Factory development, workflow design and production runs remain distinct.
+
+| Concept | Distinction | Computing analogy | Human physiology analogy |
+|---|---|---|---|
+| Knowledge / context | Available facts vs task-relevant selection | Storage vs loaded runtime state | Memory vs current sensory signals |
+| Harness | Execution and tool access | Runtime, APIs and I/O | Nervous and musculoskeletal systems |
+| Verification | Compare outcome against criteria | Assertions and tests | Physiological monitoring |
+| Convergence | Bounded progress toward acceptable state | Iterative solver with stop condition | Homeostatic feedback |
+| Observability / learning | Inspect execution vs improve future behavior | Tracing vs feedback-driven changes | Sensory monitoring vs neuroplasticity |
+| Guardrails | Restrict unacceptable action | Permissions and isolation | Immunity and protective reflexes |
+
+Analogies are limited functional comparisons, not literal equivalences. Iteration alone does not guarantee progress; termination may mean acceptance or escalation. The detailed canonical views below retain their existing authority and evidence limits.
+
+The engineering factory uses M0–M8 to build the product; educational production uses PreRun / Run / PostRun to generate materials. Keep their run IDs and evidence distinct.
 
 ![Three engineering scopes](diagrams/04-factory/factory-mts-E1-factory-operating-model-to-be.svg)
 
@@ -13,7 +42,7 @@ Factory Engineering builds reusable capabilities; Workflow Engineering designs r
 
 ![Governed operating model](diagrams/04-factory/factory-mts-E1-governed-operating-model-to-be.svg)
 
-Intent establishes the desired outcome; context resolves relevant knowledge and effective controls; the approved execution contract governs execution. Verification measures conformance, bounded convergence corrects gaps, observability captures evidence and learning. Governance/security and reviewability are cross-cutting.
+The approved execution contract governs execution. Governance/security and reviewability are cross-cutting.
 
 ## K1 — Knowledge & Context Map
 
@@ -151,7 +180,7 @@ Minimum new telemetry: actual tool/model versions, resource usage where availabl
 | Observability & Learning | O1, B1, Q1 |
 | Governance & Security | R1, S1 |
 
-Reviewability Engineering is cross-cutting, not an additional perspective. See [standard](../../../strategy/reviewability-engineering/REVIEWABILITY-STANDARD.md).
+Reviewability Engineering is cross-cutting, not an additional perspective. See [standard](../../../strategy/reviewability-engineering/REVIEWABILITY-STANDARD.md). The proposed [Documentation Engineering companion](../../../strategy/documentation-engineering/README.md) improves explanation and reading structure without altering these perspectives or discipline mappings.
 
 ## As-is baseline versus target
 
