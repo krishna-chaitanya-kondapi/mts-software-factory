@@ -1,0 +1,139 @@
+discipline: reviewability-engineering
+version: 1.0.0
+levels:
+  1: "Conceptual Foundation"
+  2: "Logical Design"
+  3: "Implementation Review"
+  4: "Technical Details"
+scopes: [factory, workflow, production-run]
+perspectives:
+  - id: P
+    name: "Product"
+    group: "Intent & Product"
+    patterns:
+      - {id: P1, level: 1, name: "Product landscape"}
+      - {id: P2, level: 2, name: "Capability model"}
+      - {id: P3, level: 3, name: "Deliverable map"}
+      - {id: P4, level: 4, name: "Feature specification"}
+  - id: V
+    name: "Requirements & Verification"
+    group: "Intent & Product"
+    patterns:
+      - {id: V1, level: 1, name: "Definition of Done map"}
+      - {id: V2, level: 2, name: "Verification matrix"}
+      - {id: V3, level: 3, name: "QA evidence dashboard"}
+      - {id: V4, level: 4, name: "Test specification"}
+  - id: L
+    name: "Functional"
+    group: "Architecture Kernel"
+    patterns:
+      - {id: L1-BPL, level: 1, name: "Business process landscape"}
+      - {id: L2-LPS, level: 2, name: "Logical process swimlane"}
+      - {id: L3-IPS, level: 3, name: "Implementation process swimlane", specification: patterns/L3-IPS.md}
+      - {id: L4-TEF, level: 4, name: "Technical execution flow"}
+  - id: I
+    name: "Information"
+    group: "Architecture Kernel"
+    patterns:
+      - {id: I1-DCM, level: 1, name: "Domain concept map"}
+      - {id: I2-ONT, level: 2, name: "Ontology & taxonomy map"}
+      - {id: I3-ERD, level: 3, name: "Logical ERD"}
+      - {id: I4-PIM, level: 4, name: "Physical information model"}
+  - id: C
+    name: "Application"
+    group: "Architecture Kernel"
+    patterns:
+      - {id: C1, level: 1, name: "System context"}
+      - {id: C2, level: 2, name: "Containers"}
+      - {id: C3, level: 3, name: "Components"}
+      - {id: C4, level: 4, name: "Code"}
+  - id: Q
+    name: "Quality"
+    group: "Architectural Overlays"
+    patterns:
+      - {id: Q1, level: 1, name: "Quality attribute map"}
+      - {id: Q2, level: 2, name: "Quality scenario matrix"}
+      - {id: Q3, level: 3, name: "Fitness test dashboard"}
+      - {id: Q4, level: 4, name: "Test trace"}
+  - id: T
+    name: "Technology"
+    group: "Architectural Overlays"
+    patterns:
+      - {id: T1, level: 1, name: "Technology landscape"}
+      - {id: T2, level: 2, name: "Technology decisions / ADR"}
+      - {id: T3, level: 3, name: "Component technology mapping"}
+      - {id: T4, level: 4, name: "Dependency graph"}
+  - id: B
+    name: "Cost"
+    group: "Architectural Overlays"
+    patterns:
+      - {id: B1, level: 1, name: "Cost drivers & budgets"}
+      - {id: B2, level: 2, name: "Resource estimates"}
+      - {id: B3, level: 3, name: "Consumption dashboard"}
+      - {id: B4, level: 4, name: "Resource optimization"}
+  - id: R
+    name: "Responsibility"
+    group: "Architectural Overlays"
+    patterns:
+      - {id: R1, level: 1, name: "Decision rights map"}
+      - {id: R2, level: 2, name: "Activity ownership / RACI"}
+      - {id: R3, level: 3, name: "Gate enforcement map"}
+      - {id: R4, level: 4, name: "Authorization logic"}
+  - id: S
+    name: "Security"
+    group: "Architectural Overlays"
+    patterns:
+      - {id: S1, level: 1, name: "Trust boundary map"}
+      - {id: S2, level: 2, name: "Threat model"}
+      - {id: S3, level: 3, name: "Implemented control mapping"}
+      - {id: S4, level: 4, name: "Security configuration"}
+  - id: K
+    name: "Knowledge & Context"
+    group: "AI Factory Engineering"
+    patterns:
+      - {id: K1, level: 1, name: "Knowledge landscape"}
+      - {id: K2, level: 2, name: "Context model / flow"}
+      - {id: K3, level: 3, name: "Context lineage"}
+      - {id: K4, level: 4, name: "Retrieval specification"}
+  - id: E
+    name: "Harness & Execution"
+    group: "AI Factory Engineering"
+    patterns:
+      - {id: E1, level: 1, name: "Harness architecture"}
+      - {id: E2, level: 2, name: "Orchestration flow"}
+      - {id: E3, level: 3, name: "Implementation sequence"}
+      - {id: E4, level: 4, name: "Tool call flow"}
+  - id: N
+    name: "Loop & Convergence"
+    group: "AI Factory Engineering"
+    patterns:
+      - {id: N1, level: 1, name: "Convergence goals / feedback map"}
+      - {id: N2, level: 2, name: "Feedback loop design"}
+      - {id: N3, level: 3, name: "Iteration / repair trace"}
+      - {id: N4, level: 4, name: "State machine"}
+  - id: O
+    name: "Observability & Learning"
+    group: "AI Factory Engineering"
+    patterns:
+      - {id: O1, level: 1, name: "KPI tree / measurement objectives"}
+      - {id: O2, level: 2, name: "Metrics & event model"}
+      - {id: O3, level: 3, name: "Operational dashboard / RunLog"}
+      - {id: O4, level: 4, name: "Instrumentation"}
+supplementary_patterns:
+  - {id: I2-TAX, name: "Taxonomy tree"}
+  - {id: ELD, name: "Entity lifecycle diagram"}
+  - {id: DFD, name: "Data flow diagram"}
+  - {id: DLD, name: "Data lineage diagram"}
+  - {id: CRUD, name: "Process entity CRUD matrix"}
+  - {id: OWN, name: "Entity ownership matrix"}
+  - {id: KG, name: "Knowledge graph"}
+  - {id: SEQ, name: "Sequence diagram"}
+  - {id: IFM, name: "Interface matrix"}
+aliases:
+  - {namespace: legacy-mvp, id: A1, canonical: R1}
+  - {namespace: legacy-mvp, id: R1, canonical: N1}
+  - {namespace: legacy-rvc, rule: 'RVC- prefix is a legacy qualifier; retain original IDs and resolve perspective in source context'}
+states: [as-is, to-be]
+statuses: [draft, review, approved, superseded]
+preferred_static_visual: svg
+supplementary_text: markdown

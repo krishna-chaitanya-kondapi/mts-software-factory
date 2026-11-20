@@ -4,7 +4,9 @@
 
 ## Start here
 
-[Level 1 — foundation](level-1/README.md) is the active review increment. Its fourteen views are consolidated into four short documents. Review the whole before drilling down.
+Apply the [Reviewability Engineering discipline](../../strategy/reviewability-engineering/README.md) as the complete review method; this workspace is its progressive MTS application. The standard defines classification, naming, visual fidelity and review artifact DoD.
+
+[Level 1 — Conceptual Foundation](level-1/README.md) is the active review increment. Its fourteen views are consolidated into four short documents. Review the whole before drilling down.
 
 | Level | Purpose | Status |
 |---|---|---|
@@ -23,13 +25,13 @@ MTS review focus: Weekly Practice, Mock Assessments, Topic Mastery; Curriculum, 
 
 ## Artifact conventions
 
-Each view uses a stable ID, scope (overall or workflow), state (as-is/to-be), status (draft/review/approved/superseded), owner, source references and evidence limits. Prefer one or two pages of plain-language review per document, a diagram only when it helps, and relative links. Use Markdown with embedded Mermaid or companion SVG when layout precision warrants it. Store companions beside their review document with names such as `mts-RVC-L1-BPL-to-be.svg`. Add deeper files only to answer a concrete review question. Preserve existing atomic trace IDs.
+Each view uses a stable ID, scope (factory, workflow or production-run; legacy overall means factory in this workspace), state (as-is/to-be), status (draft/review/approved/superseded), owner, source references and evidence limits. Prefer one or two pages of plain-language review per document, a diagram only when it helps, and relative links. Use canonical SVG for static visual reviews; render the source before approval and commit exact approved bytes. No recreation in Mermaid unless explicitly requested. Store companions beside the review document using the standard naming convention; preserve legacy filenames and IDs. Add deeper files only to answer a concrete review question. Preserve existing atomic trace IDs.
 
 For executable schemas, code, tests, run logs and release evidence, link to their actual authoritative locations rather than copying them here. No production credentials, student records or private source materials in this public repository.
 
 ## Cross-cutting overlays
 
-Q1 quality, T1 technology, B1 cost, A1 authority and S1 security are Level 1 architecture views, progressively elaborated only where a slice needs them. Keep the four-document model; link constraints to execution, bounded recovery, evidence and DoD. See [architecture](level-1/ARCHITECTURE.md#q1--quality-attribute-matrix).
+Q1 quality, T1 technology, B1 cost, A1 authority (canonical Responsibility R1) and S1 security are Level 1 architecture views, progressively elaborated only where a slice needs them. Keep the four-document model; link constraints to execution, bounded recovery, evidence and DoD. See [architecture](level-1/ARCHITECTURE.md#q1--quality-attribute-matrix).
 
 ## Incremental exit rule
 

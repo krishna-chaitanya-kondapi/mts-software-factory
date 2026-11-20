@@ -17,6 +17,10 @@ This file is a thin, model-agnostic orientation for human and AI contributors.
 - Do not migrate executable code or establish the permanent architecture without explicit approval.
 - M0–M8 are logical stations, not a requirement for nine separate teams or agents.
 
+## Reviewability Engineering
+
+For architecture, intent, workflow, implementation and evidence reviews, apply the [Reviewability Engineering standard](strategy/reviewability-engineering/README.md) and [skill](skills/reviewability-engineering/SKILL.md). Use minimum sufficient views and preserve the exact approved canonical visual source; no unrequested diagram recreation. Existing authority, trace IDs and release gates remain intact.
+
 ## Documentation checkpoint
 
 Before drafting or revising Markdown, apply the strategy's [documentation standard](strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#documentation-standard-for-artifact-markdown).

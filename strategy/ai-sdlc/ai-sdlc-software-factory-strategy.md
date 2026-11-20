@@ -10,6 +10,8 @@
 
 ---
 
+**Review methodology companion:** [Reviewability Engineering](../reviewability-engineering/README.md) defines progressive review depth, perspectives, scopes, patterns, artifact fidelity and review DoD. It supports the Intent Quartet, M4 architecture, execution and evidence review; it does not replace station contracts, alter convergence routes, or ratify this proposed strategy.
+
 ## Table of Contents
 
 - [Strategy at a glance](#strategy-at-a-glance)

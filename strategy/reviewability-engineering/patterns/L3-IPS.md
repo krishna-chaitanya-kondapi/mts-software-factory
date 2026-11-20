@@ -1,0 +1,9 @@
+# L3-IPS — Implementation Process Swimlane
+
+Scope: any workflow or factory process. Perspective: Functional (L3); secondary Information and Application. Purpose: who does what, in what order, with which actual implementation and evidence? Variants: as-is, to-be. Primary visual: canonical SVG; supplementary Markdown.
+
+Required: logical role plus implementation technology in lane heading; activity purpose and actual component name inside each node; source-grounded inputs/outputs, artifact handoffs, decision gates and pass/fail paths, correction and re-verification loops, persistence and boundaries. Mark external actors (e.g. independent Windows printing) explicitly. Label actual, partial, proposed and unknown components, not just repository presence. Cross-reference dated run evidence for as-is and distinguish normative sequence from actual trace. Unverified script names must not be invented. Separate human authorization, AI reasoning, harness orchestration, deterministic code and storage responsibilities when relevant; roles may share physical runtime. Use phase bands and legible labels; avoid crossing arrows where possible. Supplement with subject-specific component mappings and gaps; do not duplicate the whole flow.
+
+Example: Workflow — Weekly Worksheet Generation — L3 — Implementation Swimlane — As-Is. Filename: workflow-weekly-worksheet-L3-IPS-as-is.svg. Legacy MTS [reference diagram](https://github.com/krishna-chaitanya-kondapi/mts-crossmodel/tree/master/specs/generate_weekly_practice_worksheets) is historical evidence, not proof of actual invocation or approved visual fidelity.
+
+DoD: apply RE-01–RE-15 in the [standard](../REVIEWABILITY-STANDARD.md), plus check each lane's actor/technology, activity/component mapping, decision branches, artifact handoffs, retry exits and evidence limits. Approval is for the exact canonical source, not a newly recreated diagram.

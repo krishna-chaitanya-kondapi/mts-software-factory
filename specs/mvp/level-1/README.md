@@ -1,4 +1,4 @@
-# Level 1 — Minimum viable foundation
+# Level 1 — Conceptual Foundation
 
 **Status:** four draft review documents with fourteen views available; not yet approved.
 
@@ -8,6 +8,8 @@
 | [ARCHITECTURE.md](ARCHITECTURE.md) | L1 — Business Process Landscape; I1 — Domain Concept Map; C1 — System Context; Q1 — Quality; T1 — Technology; B1 — Cost; A1 — Authority; S1 — Security | [business architecture](../../../business-architecture.md), [ontology](../../../ontology.md), [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#4-m4-the-3d-architecture-kernel) |
 | [FACTORY.md](FACTORY.md) | K1 — Knowledge & Context Map; E1 — Execution Lifecycle Map; R1 — Convergence & Recovery Map; O1 — Observability & Learning Map | [strategy](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md) |
 | [DEFINITION-OF-DONE.md](DEFINITION-OF-DONE.md) | V1 — Definition of Done Matrix | [requirement-verification mapping](../../../requirement-verification-mapping.md), [strategy verification design](../../../strategy/ai-sdlc/ai-sdlc-software-factory-strategy.md#3c-verification-driven-development-and-hierarchical-evidence) |
+
+Existing A1 (Authority) and R1 (Convergence & Recovery) are legacy MVP IDs; canonical mappings are Responsibility R1 and Convergence N1 respectively. Preserve existing IDs and use qualified namespaces in new views. See the [reviewability standard](../../../strategy/reviewability-engineering/REVIEWABILITY-STANDARD.md).
 
 ## Minimum review sequence
 
