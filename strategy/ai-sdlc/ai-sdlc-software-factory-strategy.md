@@ -2,9 +2,9 @@
 
 **Purpose:** Turn governed human intent into independently verified, human-accepted, observable software outcomes through reusable agent stations and bounded, persistent learning loops.
 
-**Version:** 2026-11-06 architecture revision · **Status:** Proposed for human ratification; existing approvals and release authority are preserved.
+**Version:** 2026-11-20 AI-native alignment revision · **Status:** Proposed for human ratification; existing approvals and release authority are preserved.
 
-**Operating principle:** **Humans own intent, judgment and authority. AI accelerates elaboration and execution. Deterministic systems provide evidence.**
+**Operating principle:** **Humans own intent, judgment and authority. AI accelerates elaboration and execution. Deterministic checks, calibrated evaluations and accountable reviews provide inspectable evidence.**
 
 **Child deep dive:** [AI Software Factory: Intent Quartet Deep Dive](ai-software-factory-intent-quartet-deepdive.md) models product, business architecture, ontology and requirement-verification mapping as the least intent documents and content sufficient for a human or agent to create the intended product end to end. Content ownership, bounded review and convergence support that creation contract. It is a draft companion, not independent ratification or automation authority.
 
@@ -44,17 +44,53 @@
 
 ## Strategy at a glance
 
-The factory organizes governed work into specialized M0–M8 stations, with humans retaining authority and evidence guiding completion and learning.
+The factory transforms governed desired outcomes into independently verified, human-accepted and observable results. Engineering disciplines answer **what capabilities are needed**; M0–M8 stations answer **where work occurs**. Neither is a mandatory linear sequence.
+
+```mermaid
+flowchart TD
+ H["Human intent and authority"] --> I["Intent engineering: desired state"]
+ K["Knowledge and context: relevant facts"] --> A["Harness: controlled action"]
+ I --> A
+ A --> R["Actual artifacts and outcomes"]
+ R --> V["Verification and evaluation"]
+ I --> V
+ V --> C{"Completion contract satisfied?"}
+ C -->|Authorized repair| A
+ C -->|Yes| G["Required human gate / delivery"]
+ R --> O["Observability and learning"]
+ O -->|Governed delta| I
+ O -->|Factory improvement| K
+ O -->|Factory improvement| A
+ Q["Reviewability: human inspection and judgment"] -.-> I
+ Q -.-> V
+ Q -.-> G
+```
+
+| Discipline | Responsibility |
+|---|---|
+| Intent | Define desired outcomes, behavior and constraints, not actual reality. |
+| Knowledge & context | Govern knowledge and supply relevant facts, meaning and current state. |
+| Harness | Enable controlled action through tools, workflows, state and permissions around a replaceable model. |
+| Verification & evaluation | Compare actual results against specified criteria and rubrics using inspectable evidence. |
+| Loop & convergence | Close gaps within approved budgets, authority and stop conditions. |
+| Observability & learning | Understand actions and outcomes; improve product and factory through governed deltas. |
+| Reviewability (cross-cutting) | Enable human comprehension, challenge, judgment and approval. |
+
+**Intent Quartet:** product (what/why), business architecture (how value is delivered), ontology (meaning), requirement–verification mapping (obligations and evidence). The quartet must pass creation and completion adequacy checks for its declared scope; four files alone do not prove sufficiency.
+
+**Repeatable run:** pre-run resolves inputs and completion contract; run executes; post-run verifies and diagnoses; bounded repair repeats until done or stopped. Individual runs sit within workflows, product evolution and factory evolution. The existing L1–L3 repair routes classify causes, not loop scope.
+
+**Definition of Done:** applicable requirements + verification layers + criteria/rubrics and thresholds + independent evidence rules + required approval gates. A generated artifact is not necessarily a verified or accepted one.
+
+**Reading sequence:** [conceptual foundation and architecture companion](ai-native-engineering-foundation.md) first; then §§1–6 for methodology, §§7–10 for operational assets and execution, §§11–17 for governance and evolution. The [Intent Quartet](ai-software-factory-intent-quartet-deepdive.md) and [Reviewability Engineering](../reviewability-engineering/README.md) provide targeted drill-downs. Proposed documentation guidance is tracked separately; no unmerged branch is treated as adopted policy.
+
+### Lifecycle drill-down
 
 ![AI SDLC Agent-Station Software Factory overview](../images/software-factory-overview.png)
 
-*Overview of the stations, trace spine, completion contract and factory foundation.*
-
-The convergence flow below shows how gaps are routed to the affected station for repair, specification learning or human decision.
-
 ![Software factory convergence controller flow](../images/convergence-controller-flow.png)
 
-*Detailed station flow, including gap detection, verification, acceptance and bounded convergence.*
+These existing illustrations show station flow and correction routes, not the entire six-discipline architecture.
 
 ---
 
@@ -81,7 +117,7 @@ Runtime outcomes, gap detection, root cause and governed deltas
     ↺ bounded convergence to the affected station
 ```
 
-The factory has four inseparable parts:
+The factory has four inseparable organizational systems. These are complementary to the six cross-cutting engineering disciplines, not a competing taxonomy:
 
 | Part | Purpose | Durable assets |
 |---|---|---|
@@ -292,6 +328,8 @@ Every M-station owns an authoritative artifact contract. Agents may draft and ma
 
 #### Documentation standard for artifact Markdown
 
+Reviewability is the governing human-review capability; documentation is one enabling practice. Use a table of contents for substantial documents, concrete implementation examples, precise compare-and-contrast definitions and computing/physiology analogies when useful. Keep canonical guidance discoverable by harnesses, version it and adopt revisions only after review. The overview serves as the review lens where adequate; avoid duplicate briefs.
+
 This standard applies to every authoritative Markdown artifact (`*.md`), including product, ontology, business architecture, requirements, architecture, design, implementation, verification and learning documents, whether the artifact is an aggregate or an independently stored record.
 
 Organize each artifact in this order:
@@ -462,6 +500,8 @@ Verification is not synonymous with testing; reviews, static analysis and inspec
 **Verification report:** Generate a drill-downable human-readable report from trace relationships and append-only execution evidence. It contains (1) version/scope/run summary, (2) applicable vs explicitly out-of-scope vs deferred counts, (3) CAP→REQ→AC→VC→TEST/EVAL/REVIEW→RUN→EVD drill-down and alternate VG view, (4) failure/RCA and attempt history, (5) independent verification metadata, and (6) FCC and human decision. Use `NOT_APPLICABLE`, `NOT_DESIGNED`, `NOT_EXECUTED`, `BLOCKED`, `PASSED`, `FAILED`, `INCONCLUSIVE`, `WAIVED` (authorized). Report coverage, execution, pass percentage and acceptance separately; never treat unverified or excluded items as passes.
 
 ### 3D. Closed-Loop Convergence and Recovery
+
+The following L1–L3 routes classify the cause and return destination. They apply across four loop scopes: individual run, workflow execution, product evolution and factory evolution. A run follows pre-run → run → post-run → bounded repair or exit; see the [run contract](ai-native-engineering-foundation.md#run-and-convergence-contract).
 
 The factory contains **three distinct loops**, not an unbounded retry arrow:
 
@@ -650,11 +690,15 @@ Preserve previous-stage artifacts as non-authoritative inputs in `source-materia
 
 ### Context architecture
 
+Knowledge, context and working/persistent memory have distinct responsibilities. Discover authoritative versioned sources, select and load relevant context, record provenance and checkpoint state; do not elevate retrieved material or generated summaries to approved intent. See the [foundation companion](ai-native-engineering-foundation.md#knowledge-and-harness-architecture).
+
 Keep root instructions short. Use them as a map to authoritative, scoped files. Load context progressively by task rather than injecting the whole repository. Generated summaries never silently replace authoritative sources.
 
 ---
 
 ## 9. Quality and Verification System
+
+Apply the completion-contract pattern to both software slices and generated deliverables (e.g., worksheet, answer key, assessment). A run-level contract references applicable criteria, rubric thresholds, evidence and approvals without duplicating their authoritative definitions. Failed mandatory criteria cannot be offset by an aggregate score.
 
 This section describes implementation techniques that realize the governing `REQ/AC ↔ VG/VC ↔ TEST/EVAL/RUN/EVD ↔ FCC` contracts in §3C. Verification outcomes must be derived from versioned evidence; the report is a view, not a parallel manual truth source. Human validation and risk acceptance are distinct decisions. See §3D for the three feedback loops and autonomous repair limits.
 
