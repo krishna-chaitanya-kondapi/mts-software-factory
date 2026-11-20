@@ -1,15 +1,27 @@
 # Level 1 — Architecture axes and overlays
 
 [Previous: 01-product](01-product.md) · [Level 1 index](README.md) · [Next: 03-definition-of-done](03-definition-of-done.md) · 2 of 4
-**ID:** RVC-ARCH-MTS-L1 · **State:** To-be conceptual review with known operating context · **Status:** Approved conceptual review view · **Revision:** 2 · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** MTS architecture owner (role)
+**ID:** RVC-ARCH-MTS-L1 · **State:** To-be conceptual review with known operating context · **Status:** Candidate for review (not approved) · **Revision:** 3 candidate · **Discipline:** Reviewability Engineering 1.1.0 · **Owner:** MTS architecture owner (role)
 
-**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. Historical status/revision above refers to the baseline, not this candidate. [Baseline and checks](REVIEW-REPORT.md).
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. The prior approved revision remains the baseline; historical approvals below are preserved as provenance. [Baseline and checks](REVIEW-REPORT.md).
 
 ## Reading guide
-- [Overview](#holistic-overview) · [Business process](#l1--business-process-landscape-rvc-l1-bpl) · [Information](#i1--domain-concept-map-rvc-i1-dcm) · [System context](#c1--system-context-rvc-c1-scd) · [Cross-axis review](#cross-axis-review)
-- [Quality](#q1--quality-attribute-matrix) · [Technology](#t1--technology-landscape) · [Cost](#b1--cost--resource-model) · [Responsibility](#r1--responsibility--authority-matrix) · [Security](#s1--trust-boundary--security-map) · [Approval evidence](#review-approval-and-source-fidelity)
+- [Holistic overview](#holistic-overview)
+- [L1 — Business Process Landscape (RVC-L1-BPL)](#l1--business-process-landscape-rvc-l1-bpl)
+- [Educational artifact production — FA-04-MAT](#educational-artifact-production--fa-04-mat)
+- [I1 — Domain Concept Map (RVC-I1-DCM)](#i1--domain-concept-map-rvc-i1-dcm)
+- [C1 — System Context (RVC-C1-SCD)](#c1--system-context-rvc-c1-scd)
+- [Cross-axis review](#cross-axis-review)
+- [Q1 — Quality Attribute Matrix](#q1--quality-attribute-matrix)
+- [T1 — Technology Landscape](#t1--technology-landscape)
+- [B1 — Cost & Resource Model](#b1--cost--resource-model)
+- [R1 — Responsibility & Authority Matrix](#r1--responsibility--authority-matrix)
+- [S1 — Trust Boundary & Security Map](#s1--trust-boundary--security-map)
+- [Overlay evolution — minimum depth by decision](#overlay-evolution--minimum-depth-by-decision)
+- [Artifact production across review levels](#artifact-production-across-review-levels)
+- [Review approval and source fidelity](#review-approval-and-source-fidelity)
 
-## Architecture in plain language
+## Holistic overview
 A trustworthy educational artifact requires coordinated work, information and participating systems. The three axes describe these separate views of the same product; overlays constrain them rather than create five more independent systems. The canonical overview below shows the relationships. Existing legacy evidence and proposed controls must remain distinct.
 
 | View | Question | Illustrative MTS example |
@@ -21,9 +33,7 @@ A trustworthy educational artifact requires coordinated work, information and pa
 
 Computing analogy: a function, its data model and its runtime differ but work together. Human physiology analogy: digestion is a function, nutrients are material inputs, and organs carry out the work; biological organs are not software components. These analogies clarify viewpoints, not implementation mappings.
 
-## Holistic overview
-
-Three axes explain what MTS does, what information it manages and which systems participate. Five overlays constrain all three. Use the current implementation as the starting point, not as proof that every target control works. The minimum controls below guide [execution](04-factory.md) and [completion](03-definition-of-done.md).
+The minimum controls below guide [execution](04-factory.md) and [completion](03-definition-of-done.md). Use current implementation as the starting point, not proof that target controls work.
 
 ![Architecture kernel and overlays](diagrams/02-architecture/factory-mts-L1-I1-C1-architecture-overview-to-be.svg)
 

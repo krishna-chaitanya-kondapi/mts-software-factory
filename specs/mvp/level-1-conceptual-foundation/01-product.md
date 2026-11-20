@@ -1,15 +1,21 @@
 # P1 — Product Intent Canvas
 
 [MVP overview](../README.md) · [Level 1 index](README.md) · [Next: 02-architecture](02-architecture.md) · 1 of 4
-**ID:** RVC-P1-MTS · **Canonical perspective:** P1 · **Scope:** Factory / MTS product · **State:** To-Be · **Status:** Approved review view · **Revision:** 1 · **Discipline:** Reviewability Engineering 1.0.0 · **Owner:** MTS product owner
+**ID:** RVC-P1-MTS · **Canonical perspective:** P1 · **Scope:** Factory / MTS product · **State:** To-Be · **Status:** Candidate for review (not approved) · **Revision:** 2 candidate · **Discipline:** Reviewability Engineering 1.0.0 · **Owner:** MTS product owner
 
-**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. Historical status/revision above refers to the baseline, not this candidate. [Baseline and checks](REVIEW-REPORT.md).
+**Candidate revision:** Documentation Engineering v0.1 pilot; not approved. The prior approved revision remains the baseline; historical approvals below are preserved as provenance. [Baseline and checks](REVIEW-REPORT.md).
 
 ## Reading guide
-- [Product intent](#product-intent) · [Landscape](#product-landscape) · [Value stream](#educational-product-value-stream) · [Scope](#scope-and-boundaries) · [Outcomes](#intended-product-outcomes) · [Authority](#authority-and-review-metadata)
+- [Product intent](#product-intent)
+- [Product landscape](#product-landscape)
+- [Educational product value stream](#educational-product-value-stream)
+- [Scope and boundaries](#scope-and-boundaries)
+- [Intended product outcomes](#intended-product-outcomes)
+- [Authority and review metadata](#authority-and-review-metadata)
 
-## Understand the product first
-A teacher needs trustworthy learning material, not a software build. The product delivers that educational value; the factory develops and improves the mechanisms that produce it. This is a conceptual target, not a claim of end-to-end automation.
+## Product intent
+
+**MTS Learning, Practice & Assessment** helps educators turn approved learning goals into trustworthy Math and ELA educational materials for learning, practice, revision and assessment. The product delivers educational value; the factory develops and improves the mechanisms for efficient creation, verification, delivery and continuous improvement. This is a conceptual target, not a claim of end-to-end automation.
 
 | Concept | Distinction | MTS example (illustrative) |
 |---|---|---|
@@ -17,12 +23,6 @@ A teacher needs trustworthy learning material, not a software build. The product
 | Requirement | Condition the product must satisfy | Correct answers matching worksheet items |
 | Workflow | Repeatable way of delivering value | Generate, independently check and release a mock assessment |
 | Factory | Reusable engineering capabilities that build and improve workflows | Maintain shared rendering and verification mechanisms |
-
-## Product intent
-
-**MTS Learning, Practice & Assessment** helps educators turn approved learning goals into trustworthy Math and ELA educational materials, supporting effective learning, practice, revision and assessment.
-
-The product's objective is educational value. The Software Factory enables efficient creation, verification, delivery and continuous improvement. Product workflows and the factory that builds and improves them are distinct.
 
 ## Product landscape
 
